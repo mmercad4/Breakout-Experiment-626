@@ -1,3 +1,24 @@
+
+if keyboard_check_pressed(ord("1")){
+	current_weapon = obj_pistol
+}
+if keyboard_check_pressed(ord("2")){
+	current_weapon = obj_rifle
+}
+weapon = current_weapon
+
+
+if canShoot = true and mouse_check_button(mb_left){
+		canShoot = false
+		if weapon = obj_pistol{
+			alarm[0] = game_get_speed(gamespeed_fps)/3
+			instance_create_layer(x,y,"Instances",obj_bullet1_1)
+		}
+		if weapon = obj_rifle{
+			alarm[0] = game_get_speed(gamespeed_fps)/5
+			instance_create_layer(x,y,"Instances",obj_bullet5_1)
+		}
+}
 //Left/right movement handling
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
