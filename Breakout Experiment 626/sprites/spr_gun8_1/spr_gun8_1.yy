@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_gun8_1",
   "bboxMode":0,
-  "bbox_bottom":0,
+  "bbox_bottom":7,
   "bbox_left":0,
-  "bbox_right":0,
+  "bbox_right":17,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bc947170-5784-46de-af27-36ead36fca47","name":"bc947170-5784-46de-af27-36ead36fca47","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"df86010b-509e-4f4f-957b-1f8c701b5d07","name":"df86010b-509e-4f4f-957b-1f8c701b5d07","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":8,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"928ddc1c-4947-4836-9a6c-0c5d2056e5cc","blendMode":0,"displayName":"default","isLocked":false,"name":"928ddc1c-4947-4836-9a6c-0c5d2056e5cc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c3e0c6de-714d-44b1-baf7-0bc7032e7284","blendMode":0,"displayName":"default","isLocked":false,"name":"c3e0c6de-714d-44b1-baf7-0bc7032e7284","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_gun8_1",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc947170-5784-46de-af27-36ead36fca47","path":"sprites/spr_gun8_1/spr_gun8_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"00f20d55-d274-4e63-8f25-b115c1ab7bd1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"df86010b-509e-4f4f-957b-1f8c701b5d07","path":"sprites/spr_gun8_1/spr_gun8_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ddbe2b15-4cf6-47b2-8fea-ea71de9f5557","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
