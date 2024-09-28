@@ -1,3 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
+//ALARM FOR TIME BETWEEN SHOTS
 canShoot = true

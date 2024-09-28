@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rifle",
+  "%Name":"obj_shotgun",
   "eventList":[],
   "managed":true,
-  "name":"obj_rifle",
+  "name":"obj_shotgun",
   "overriddenProperties":[],
   "parent":{
     "name":"Weapon_Objects",

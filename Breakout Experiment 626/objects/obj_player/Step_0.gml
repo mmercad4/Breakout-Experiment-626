@@ -1,22 +1,50 @@
 
+//Switch weapon and bullet type
 if keyboard_check_pressed(ord("1")){
-	current_weapon = obj_pistol
+	weapon = obj_pistol
+	bullet = obj_pistol_bullet
 }
 if keyboard_check_pressed(ord("2")){
-	current_weapon = obj_rifle
+	weapon = obj_shotgun
+	bullet = obj_shotgun_bullet
 }
-weapon = current_weapon
 
-
+//SET WEAPON STATS BASED ON CURRENT WEAPON
+weapon_stats = switch_weapon(weapon)
+propel = false
 if canShoot = true and mouse_check_button(mb_left){
-		canShoot = false
-		if weapon = obj_pistol{
-			alarm[0] = game_get_speed(gamespeed_fps)/3
-			instance_create_layer(x,y,"Instances",obj_bullet1_1)
+		canShoot = false //Cannot shoot until alarm 0 runs out (time between shots)
+		propel = true //Tell the block further down to propel the player backwards
+		
+		//TODO: ADD CLIP SIZE/RELOADING (DIFFERENT FROM TIME BETWEEN SHOTS)
+		
+		if weapon = obj_pistol {
+			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
+			repeat(weapon_stats.num_bullets) { 
+				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
+				instance_create_layer(x,y,"Instances", bullet, //Create bullet instances
+					{
+						//Pass in creation variables to bullets
+						speed : 8,
+						direction : angle,
+						image_angle : angle,
+						damage : weapon_stats.damage
+					}) }
 		}
-		if weapon = obj_rifle{
-			alarm[0] = game_get_speed(gamespeed_fps)/5
-			instance_create_layer(x,y,"Instances",obj_bullet5_1)
+		if weapon = obj_shotgun{
+			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
+			repeat(weapon_stats.num_bullets) { 
+				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
+				instance_create_layer(x,y,"Instances", bullet, //Create bullet instances
+					{
+						//Pass in creation variables to bullets
+						speed : 16,
+						direction : angle,
+						image_angle : angle,
+						damage : weapon_stats.damage,
+						image_xscale : 0.5,
+						image_yscale : 0.5,
+					}) }
 		}
 }
 //Left/right movement handling
@@ -35,10 +63,11 @@ else { input_accel = 0 } //No acceleration in either direction if there's no lef
 if (not keyboard_check(ord("D")) and not keyboard_check(ord("A")) and move_speed != 0) { move_speed -= sign(move_speed) } //Decceleration— if no input, deccelerate the player.
 if acceleration == 0 and move_speed > -1 and move_speed < 1 { move_speed = 0 } //Round move_speed to 0 if it's a decimal between -1 and 1 (leaving this out causes the player to jitter back and forth otherwise)
 
-//Shooting
-if (mouse_check_button_pressed(mb_left)) { 
-	if gun_accel_x < 5 { gun_accel_x -= lengthdir_x(5,point_direction(x,y,mouse_x,mouse_y)) } //Horizontal acceleration from shooting is ADDITIVE, but capped lower than vertical acceleration
-	if gun_accel_y < 10 { gun_accel_y -= lengthdir_y(10,point_direction(x,y,mouse_x,mouse_y)) } 
+//If a shot has been registered earlier in the same frame, propel will have been set to true, and so send the player flying backwards
+if (propel) {
+	if gun_accel_x < 5 { gun_accel_x -= lengthdir_x(weapon_stats.propulsion,point_direction(x,y,mouse_x,mouse_y)) } //Horizontal acceleration from shooting is ADDITIVE, but capped lower than vertical acceleration
+	if gun_accel_y < 10 { gun_accel_y -= lengthdir_y(weapon_stats.propulsion*2,point_direction(x,y,mouse_x,mouse_y)) } 
+	propel = false //Be sure to set this back!
 	}
 
 
