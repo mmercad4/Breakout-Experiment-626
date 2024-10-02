@@ -1,6 +1,9 @@
 // Step Event for obj_patroller
-
 // Check if the player exists in the room
+if hp<=0{
+	instance_destroy()
+}
+
 if (instance_exists(obj_player)) {
     // Calculate distance to the player
     var dist_to_player = distance_to_object(obj_player);

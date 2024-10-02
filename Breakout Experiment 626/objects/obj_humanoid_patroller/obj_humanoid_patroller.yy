@@ -5,6 +5,8 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_pistol_bullet","path":"objects/obj_pistol_bullet/obj_pistol_bullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_humanoid_patroller",
@@ -37,7 +39,7 @@
     {"$GMObjectProperty":"v1","%Name":"shooting_timer","filters":[],"listItems":[],"multiselect":false,"name":"shooting_timer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"path_speed","filters":[],"listItems":[],"multiselect":false,"name":"path_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"damage","filters":[],"listItems":[],"multiselect":false,"name":"damage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"bullet_type","filters":[],"listItems":[],"multiselect":false,"name":"bullet_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_pistol_bullet","path":"objects/obj_pistol_bullet/obj_pistol_bullet.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_pistol_bullet","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"bullet_type","filters":[],"listItems":[],"multiselect":false,"name":"bullet_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_bullet_enemy","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
@@ -46,9 +48,6 @@
     "name":"spr_enemy_attack",
     "path":"sprites/spr_enemy_attack/spr_enemy_attack.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_enemy",
-    "path":"sprites/spr_enemy/spr_enemy.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
