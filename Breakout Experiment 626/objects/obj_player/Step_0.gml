@@ -1,4 +1,6 @@
-
+if hp <= 0{
+	instance_destroy()
+}
 //Switch weapon and bullet type
 if keyboard_check_pressed(ord("1")){
 	weapon = obj_pistol

@@ -3,8 +3,9 @@
 // obj_humanoid Draw Event
 
 // Call the default draw event (to draw the sprite)
-draw_self();
+//draw_self();
 
+if is_damaged = true{
 // Define the size and position of the health bar
 var bar_width = 50;     // New smaller width of the health bar
 var bar_height = 5;     // New smaller height of the health bar
@@ -26,3 +27,4 @@ draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, false);
 // Draw the filled part of the health bar
 draw_set_color(c_green); // Foreground color (representing current health)
 draw_rectangle(bar_x, bar_y, bar_x + current_bar_width, bar_y + bar_height, false);
+}

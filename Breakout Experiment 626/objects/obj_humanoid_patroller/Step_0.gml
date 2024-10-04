@@ -1,5 +1,8 @@
 // Step Event for obj_patroller
 // Check if the player exists in the room
+if hp < 100{
+	is_damaged = true
+}
 if hp<=0{
 	instance_destroy()
 }
