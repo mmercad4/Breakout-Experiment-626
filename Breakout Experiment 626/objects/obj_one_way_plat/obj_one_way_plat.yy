@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bullet",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_one_way_plat",
+  "eventList":[],
   "managed":true,
-  "name":"obj_bullet",
+  "name":"obj_one_way_plat",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullet_Objects",
-    "path":"folders/Objects/Bullet_Objects.yy",
+    "name":"Level Design",
+    "path":"folders/Objects/Level Design.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite2",
-    "path":"sprites/Sprite2/Sprite2.yy",
+    "name":"spr_oneway",
+    "path":"sprites/spr_oneway/spr_oneway.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -6,8 +6,8 @@
   "name":"obj_block",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Level Design",
+    "path":"folders/Objects/Level Design.yy",
   },
   "parentObjectId":null,
   "persistent":false,
