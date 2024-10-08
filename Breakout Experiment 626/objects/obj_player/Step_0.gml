@@ -150,9 +150,10 @@ if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed-1,obj_one_w
 	y+=jump_speed
 	do {
 		y-=sign(jump_speed)
+		x-=sign(move_speed)
 		show_debug_message(string(y))
 		}
-	until (collision_rectangle(bbox_left+move_speed,bbox_bottom-1,bbox_right+move_speed,bbox_bottom+1,obj_one_way_plat,true,true))
+	until (collision_rectangle(bbox_left+move_speed,bbox_bottom,bbox_right+move_speed,bbox_bottom+1,obj_one_way_plat,true,true))
 	y-=1
 	jump_speed = 0
 	gun_accel_y = 0
