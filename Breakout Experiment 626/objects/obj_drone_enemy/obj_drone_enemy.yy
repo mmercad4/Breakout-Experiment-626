@@ -1,14 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_humanoid_enemy",
+  "%Name":"obj_drone_enemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_humanoid_enemy",
+  "name":"obj_drone_enemy",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"bullet_type","path":"objects/obj_enemy/obj_enemy.yy",},"resource":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_bullet_enemy",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"enemy1_path","path":"paths/enemy1_path/enemy1_path.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"enemy1_path",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"attack_range","path":"objects/obj_enemy/obj_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"shooting_delay","path":"objects/obj_enemy/obj_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"enemy3_path","path":"paths/enemy3_path/enemy3_path.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"enemy3_path",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"attack_range","path":"objects/obj_enemy/obj_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"shooting_delay","path":"objects/obj_enemy/obj_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
   ],
   "parent":{
     "name":"Enemies",
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_attack",
-    "path":"sprites/spr_enemy_attack/spr_enemy_attack.yy",
+    "name":"spr_drone2_firing1",
+    "path":"sprites/spr_drone2_firing1/spr_drone2_firing1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
