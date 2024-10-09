@@ -1,6 +1,7 @@
 if hp <= 0{
 	instance_destroy()
 }
+if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
 //Switch weapon and bullet type
 if keyboard_check_pressed(ord("1")){
 	weapon = obj_pistol
@@ -81,11 +82,11 @@ move_speed = clamp(move_speed, -max_move, max_move) //Cap horizontal movement sp
 input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
 
-if (!place_meeting(x,y+1,obj_block)) { jump_speed += 1	} //If the player is not standing on the ground, accelerate them downwards
+if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1	} //If the player is not standing on the ground, accelerate them downwards
 
 //Jumping
 if (keyboard_check(vk_space)) {
-	if (instance_place(x,y+1,obj_block)) { jump_speed = jump_height }
+	if (instance_place(x,y+1,obj_block) or collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed = jump_height }
 } 
 
 //Deccelerate the player's gun acceleration
@@ -145,6 +146,22 @@ if (place_meeting(x+move_speed, y+jump_speed, obj_block)) {
 	gun_accel_x = 0
 	gun_accel_y = 0
 }
+
+//Collision handling with one-way platforms— only stop the player if they're moving downwards and their feet touch the platform
+if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed-1,obj_one_way_plat,true,true) and jump_speed > 0) {
+	x+=move_speed
+	y+=jump_speed
+	do {
+		y-=sign(jump_speed)
+		x-=sign(move_speed)
+		show_debug_message(string(y))
+		}
+	until (collision_rectangle(bbox_left+move_speed,bbox_bottom,bbox_right+move_speed,bbox_bottom+1,obj_one_way_plat,true,true))
+	y-=1
+	jump_speed = 0
+	gun_accel_y = 0
+}
+
 
 //Change x and y by their respective movement variables. Effectively the same as using hspeed/vspeed
 x += move_speed 

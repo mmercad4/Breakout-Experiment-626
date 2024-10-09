@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_laser",
+  "%Name":"obj_sliding_door",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_laser",
+  "name":"obj_sliding_door",
   "overriddenProperties":[],
   "parent":{
     "name":"Level Design",
@@ -28,13 +29,16 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"locked","filters":[],"listItems":[],"multiselect":false,"name":"locked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"scale_x","filters":[],"listItems":[],"multiselect":false,"name":"scale_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_laser",
-    "path":"sprites/spr_laser/spr_laser.yy",
+    "name":"spr_camera_transition",
+    "path":"sprites/spr_camera_transition/spr_camera_transition.yy",
   },
   "spriteMaskId":null,
   "visible":true,

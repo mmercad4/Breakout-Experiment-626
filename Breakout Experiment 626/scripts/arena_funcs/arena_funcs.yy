@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script1",
+  "%Name":"arena_funcs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script1",
+  "name":"arena_funcs",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
