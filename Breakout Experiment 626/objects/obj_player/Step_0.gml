@@ -1,4 +1,4 @@
-if hp <= 0{
+if hp <= 0 {
 	instance_destroy()
 }
 if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
@@ -79,14 +79,14 @@ if canShoot = true and mouse_check_button(mb_left){
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
 	image_xscale = 1
 	
-	if input_accel < 2 { input_accel += 1 } //Max acceleration (from player input) is 2
+	if input_accel < 2 { input_accel += 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
 
 else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, self.bbox_top+sign(jump_speed), self.bbox_right-1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) { 
 	image_xscale = -1
 	
-	if input_accel > -2 { input_accel -= 1 } //Max acceleration (from player input) is 2
+	if input_accel > -2 { input_accel -= 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
 else { input_accel = 0 } //No acceleration in either direction if there's no left/right input being made

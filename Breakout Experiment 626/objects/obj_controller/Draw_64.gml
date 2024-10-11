@@ -1,6 +1,7 @@
 // obj_controller Draw GUI Event
 
 // Define the size and position of the health bar
+display_set_gui_size(1920,1080);
 var bar_x = 20;          // X position on the screen
 var bar_y = 20;          // Y position on the screen
 var bar_width = 200;     // Width of the health bar
