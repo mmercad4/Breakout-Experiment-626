@@ -4,10 +4,16 @@ if hp <= 0{
 if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
 //Switch weapon and bullet type
 if keyboard_check_pressed(ord("1")){
+	if instance_exists(obj_shotgun){ //To simulate gun swapping
+		instance_destroy(obj_shotgun)
+	}
 	weapon = obj_pistol
 	bullet = obj_pistol_bullet
 }
 if keyboard_check_pressed(ord("2")){
+		if instance_exists(obj_pistol){ //To simulate gun swapping
+		instance_destroy(obj_pistol)
+	}
 	weapon = obj_shotgun
 	bullet = obj_shotgun_bullet
 }
@@ -15,17 +21,35 @@ if keyboard_check_pressed(ord("2")){
 //SET WEAPON STATS BASED ON CURRENT WEAPON
 weapon_stats = switch_weapon(weapon)
 propel = false
+
+	//Weapon showing
+	if weapon = obj_pistol{
+		if not instance_exists(obj_pistol){
+			instance_create_layer(x,y-8,"Instances",obj_pistol)
+		}
+	}
+	if weapon = obj_shotgun{
+		if not instance_exists(obj_shotgun){
+			instance_create_layer(x,y-8,"Instances",obj_shotgun)
+		}
+	}
+
+
 if canShoot = true and mouse_check_button(mb_left){
 		canShoot = false //Cannot shoot until alarm 0 runs out (time between shots)
-		propel = true //Tell the block further down to propel the player backwards
-		
+		if weapon == obj_shotgun{
+			propel = true //Tell the block further down to propel the player backwards
+		}
+		else{
+			propel = false
+		}
 		//TODO: ADD CLIP SIZE/RELOADING (DIFFERENT FROM TIME BETWEEN SHOTS)
 		
 		if weapon = obj_pistol {
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
-				instance_create_layer(x,y,"Instances", bullet, //Create bullet instances
+				instance_create_layer(x+6,y-8,"Instances", bullet, //Create bullet instances
 					{
 						//Pass in creation variables to bullets
 						speed : 8,
@@ -38,7 +62,7 @@ if canShoot = true and mouse_check_button(mb_left){
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
-				instance_create_layer(x,y,"Instances", bullet, //Create bullet instances
+				instance_create_layer(x+6,y-8,"Instances", bullet, //Create bullet instances
 					{
 						//Pass in creation variables to bullets
 						speed : 16,
@@ -53,11 +77,15 @@ if canShoot = true and mouse_check_button(mb_left){
 //Left/right movement handling
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
+	image_xscale = 1
+	
 	if input_accel < 2 { input_accel += 1 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
 
 else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, self.bbox_top+sign(jump_speed), self.bbox_right-1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) { 
+	image_xscale = -1
+	
 	if input_accel > -2 { input_accel -= 1 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
@@ -84,9 +112,11 @@ input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
 if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1	} //If the player is not standing on the ground, accelerate them downwards
 
-//Jumping
-if (keyboard_check(vk_space)) {
-	if (instance_place(x,y+1,obj_block) or collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed = jump_height }
+//Jumping //TODO SET Jumping Sprite
+if (keyboard_check_pressed(vk_space)) {
+	if (instance_place(x,y+1,obj_block) or collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) {
+		jump_speed = jump_height
+		}
 } 
 
 //Deccelerate the player's gun acceleration

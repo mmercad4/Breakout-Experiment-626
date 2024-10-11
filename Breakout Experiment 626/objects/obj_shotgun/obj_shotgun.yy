@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_shotgun",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_shotgun",
   "overriddenProperties":[],
@@ -27,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_gun8_1",
+    "path":"sprites/spr_gun8_1/spr_gun8_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

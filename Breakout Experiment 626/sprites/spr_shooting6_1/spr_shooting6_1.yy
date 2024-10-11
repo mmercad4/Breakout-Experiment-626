@@ -28,7 +28,7 @@
   ],
   "name":"spr_shooting6_1",
   "nineSlice":null,
-  "origin":0,
+  "origin":3,
   "parent":{
     "name":"Shooting Effects",
     "path":"folders/Sprites/Player Weapons Sprites/Shooting Effects.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":24,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
