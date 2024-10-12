@@ -1,6 +1,7 @@
 hp = 100
 canShoot = true
 points = 0
+isJump = false
 
 weapon_stats = { //struct holding all the characteristics of the weapon you're holding
 	damage : 0,
