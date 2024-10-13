@@ -82,6 +82,7 @@
     {"id":{"name":"obj_shotgun_bullet","path":"objects/obj_shotgun_bullet/obj_shotgun_bullet.yy",},},
     {"id":{"name":"obj_shotgun","path":"objects/obj_shotgun/obj_shotgun.yy",},},
     {"id":{"name":"obj_sliding_door","path":"objects/obj_sliding_door/obj_sliding_door.yy",},},
+    {"id":{"name":"obj_unlocker","path":"objects/obj_unlocker/obj_unlocker.yy",},},
     {"id":{"name":"enemy1_path","path":"paths/enemy1_path/enemy1_path.yy",},},
     {"id":{"name":"enemy2_path","path":"paths/enemy2_path/enemy2_path.yy",},},
     {"id":{"name":"enemy3_path","path":"paths/enemy3_path/enemy3_path.yy",},},

@@ -2,24 +2,27 @@ if hp <= 0 {
 	instance_destroy()
 }
 if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
-//Switch weapon and bullet type
-if keyboard_check_pressed(ord("1")){
+//Switch weapon and bullet type if not reloading
+if keyboard_check_pressed(ord("1")) and not global.draw_reload and pistol_unlocked {
 	if instance_exists(obj_shotgun){ //To simulate gun swapping
 		instance_destroy(obj_shotgun)
 	}
 	weapon = obj_pistol
 	bullet = obj_pistol_bullet
+	weapon_stats = switch_weapon(weapon)
+	bullets_left = old_clips[0]
 }
-if keyboard_check_pressed(ord("2")){
+if keyboard_check_pressed(ord("2")) and not global.draw_reload and shotgun_unlocked {
 		if instance_exists(obj_pistol){ //To simulate gun swapping
 		instance_destroy(obj_pistol)
 	}
 	weapon = obj_shotgun
 	bullet = obj_shotgun_bullet
+	weapon_stats = switch_weapon(weapon)
+	bullets_left = old_clips[1]
 }
 
 //SET WEAPON STATS BASED ON CURRENT WEAPON
-weapon_stats = switch_weapon(weapon)
 propel = false
 
 	//Weapon showing
@@ -35,15 +38,13 @@ propel = false
 	}
 
 
-if canShoot = true and mouse_check_button(mb_left){
+if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
+		bullets_left -= 1
+		if weapon == obj_pistol { old_clips[0] = bullets_left }
+		else if weapon == obj_shotgun { old_clips[1] = bullets_left }
+		//RPG here
 		canShoot = false //Cannot shoot until alarm 0 runs out (time between shots)
-		if weapon == obj_shotgun{
-			propel = true //Tell the block further down to propel the player backwards
-		}
-		else{
-			propel = false
-		}
-		//TODO: ADD CLIP SIZE/RELOADING (DIFFERENT FROM TIME BETWEEN SHOTS)
+		propel = true
 		
 		if weapon = obj_pistol {
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
@@ -72,6 +73,11 @@ if canShoot = true and mouse_check_button(mb_left){
 						image_xscale : 0.5,
 						image_yscale : 0.5,
 					}) }
+		}
+
+		if bullets_left == 0 { //No bullets left in clip, reload
+			alarm[1] = weapon_stats.reload_time
+			global.draw_reload = true
 		}
 }
 //Left/right movement handling
@@ -110,7 +116,7 @@ move_speed = clamp(move_speed, -max_move, max_move) //Cap horizontal movement sp
 input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
 
-if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1	} //If the player is not standing on the ground, accelerate them downwards
+if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1 } //If the player is not standing on the ground, accelerate them downwards
 
 //Jumping //TODO SET Jumping Sprite
 if (keyboard_check_pressed(vk_space)) {
@@ -178,16 +184,14 @@ if (place_meeting(x+move_speed, y+jump_speed, obj_block)) {
 }
 
 //Collision handling with one-way platforms— only stop the player if they're moving downwards and their feet touch the platform
-if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed-1,obj_one_way_plat,true,true) and jump_speed > 0) {
-	x+=move_speed
-	y+=jump_speed
+if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed,obj_one_way_plat,true,true) and jump_speed > 0) {
 	do {
-		y-=sign(jump_speed)
-		x-=sign(move_speed)
+		y+=sign(jump_speed)
+		x+=sign(move_speed)
 		show_debug_message(string(y))
 		}
-	until (collision_rectangle(bbox_left+move_speed,bbox_bottom,bbox_right+move_speed,bbox_bottom+1,obj_one_way_plat,true,true))
-	y-=1
+	until (collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) 
+	//y-=1
 	jump_speed = 0
 	gun_accel_y = 0
 }
