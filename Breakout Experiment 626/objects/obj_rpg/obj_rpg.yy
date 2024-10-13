@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pistol",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_rpg",
+  "eventList":[],
   "managed":true,
-  "name":"obj_pistol",
+  "name":"obj_rpg",
   "overriddenProperties":[],
   "parent":{
     "name":"Weapon_Objects",
     "path":"folders/Objects/Weapon_Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pistol",
+    "path":"objects/obj_pistol/obj_pistol.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gun5_1",
-    "path":"sprites/spr_gun5_1/spr_gun5_1.yy",
+    "name":"spr_gun1_1",
+    "path":"sprites/spr_gun1_1/spr_gun1_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

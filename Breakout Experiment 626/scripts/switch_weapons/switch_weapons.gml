@@ -6,7 +6,7 @@ function switch_weapon(weapon_obj){
 			damage : 3,
 			propulsion : 5,
 			clip_size : 6,
-			reload_time : 1.5,
+			reload_time : 60,
 			num_bullets : 1,
 			spread : 3,
 			time_between_shots : 2
@@ -18,10 +18,22 @@ function switch_weapon(weapon_obj){
 			damage : 1,
 			propulsion : 10,
 			clip_size : 2,
-			reload_time : 0.25,
+			reload_time : 120,
 			num_bullets : 6,
 			spread : 15,
 			time_between_shots : 2
+		}
+	}
+	
+	if weapon_obj == obj_rpg {
+		return {
+			damage : 0,
+			propulsion : 0,
+			clip_size : 1,
+			reload_time : 120,
+			num_bullets : 1,
+			spread : 0,
+			time_between_shots : 1
 		}
 	}
 }
