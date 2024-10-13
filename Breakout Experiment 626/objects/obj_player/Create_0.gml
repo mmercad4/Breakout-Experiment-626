@@ -3,6 +3,7 @@ canShoot = true
 points = 0
 bullets_left = 0
 global.draw_reload = false //Whether or not to draw the reload bar above the player (within obj_controller)
+isJump = false
 
 weapon_stats = { //struct holding all the characteristics of the weapon you're holding
 	damage : 0,
