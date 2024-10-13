@@ -27,7 +27,7 @@ if (instance_exists(obj_player)) {
             }
 			
 			path_end();
-			direction = point_direction(x, y, obj_player.x+10, obj_player.y+10);
+			direction = point_direction(x, y, obj_player.x+10, obj_player.y-10);
 			speed=2
 			
         } else {
