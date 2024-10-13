@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pistol",
+  "%Name":"obj_rocket",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pistol",
+  "name":"obj_rocket",
   "overriddenProperties":[],
   "parent":{
-    "name":"Weapon_Objects",
-    "path":"folders/Objects/Weapon_Objects.yy",
+    "name":"Bullet_Objects",
+    "path":"folders/Objects/Bullet_Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pistol_bullet",
+    "path":"objects/obj_pistol_bullet/obj_pistol_bullet.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gun5_1",
-    "path":"sprites/spr_gun5_1/spr_gun5_1.yy",
+    "name":"spr_bullet5_1",
+    "path":"sprites/spr_bullet5_1/spr_bullet5_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

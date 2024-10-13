@@ -1,6 +1,4 @@
 // obj_controller Draw GUI Event
-
-
 //Draw bounding box
 draw_set_color(c_black)
 draw_set_alpha(0.25)
@@ -17,6 +15,7 @@ var bar_height = 75;     // Height of the health bar
 var current_bar_width = (player_hp / 100) * bar_width;
 
 // Draw the background of the health bar (empty part)
+draw_set_alpha(0.5)
 draw_set_color(c_black);
 draw_rectangle(bar_x - 2, bar_y - 2, bar_x + bar_width + 2, bar_y + bar_height + 2, false); // Outline
 
@@ -30,13 +29,16 @@ draw_rectangle(bar_x, bar_y, bar_x + current_bar_width, bar_y + bar_height, fals
 // Optionally, draw the numeric value of the player's health
 draw_set_color(c_white);
 draw_text(bar_x + bar_width + 10, bar_y, string(player_hp) + "/" + string(100));
-
+draw_set_alpha(1)
 //Draw gun and label
 if obj_player.weapon == obj_pistol {
 	var txt = "Pistol"
 }
 else if obj_player.weapon == obj_shotgun {
 	var txt = "Shotgun"
+}
+else if obj_player.weapon == obj_rpg {
+	var txt = "RPG"
 }
 if obj_player.weapon != noone {
 	draw_sprite_ext(object_get_sprite(obj_player.weapon),0,1700,50,5,5,0,c_white,1)

@@ -3,46 +3,67 @@ if hp <= 0 {
 }
 if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
 //Switch weapon and bullet type if not reloading
-if keyboard_check_pressed(ord("1")) and not global.draw_reload and pistol_unlocked {
-	if instance_exists(obj_shotgun){ //To simulate gun swapping
-		instance_destroy(obj_shotgun)
-	}
+if keyboard_check_pressed(ord("1")) and pistol_unlocked {
+	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_pistol
 	bullet = obj_pistol_bullet
 	weapon_stats = switch_weapon(weapon)
 	bullets_left = old_clips[0]
+	
+	//Stop reloading
+	alarm[1] = 0
+	global.draw_reload = false
 }
-if keyboard_check_pressed(ord("2")) and not global.draw_reload and shotgun_unlocked {
-		if instance_exists(obj_pistol){ //To simulate gun swapping
-		instance_destroy(obj_pistol)
-	}
+if keyboard_check_pressed(ord("2")) and shotgun_unlocked {
+	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_shotgun
 	bullet = obj_shotgun_bullet
 	weapon_stats = switch_weapon(weapon)
 	bullets_left = old_clips[1]
+	
+	//Stop reloading
+	alarm[1] = 0
+	global.draw_reload = false
+}
+if keyboard_check_pressed(ord("3")) and rpg_unlocked {
+	if instance_exists(weapon) { instance_destroy(weapon) }
+	weapon = obj_rpg
+	bullet = obj_rocket
+	weapon_stats = switch_weapon(weapon)
+	bullets_left = old_clips[2]
+	
+	//Stop reloading
+	alarm[1] = 0
+	global.draw_reload = false
 }
 
 //SET WEAPON STATS BASED ON CURRENT WEAPON
 propel = false
 
-	//Weapon showing
-	if weapon = obj_pistol{
-		if not instance_exists(obj_pistol){
-			instance_create_layer(x,y-8,"Instances",obj_pistol)
-		}
+//Weapon showing
+if weapon = obj_pistol {
+	if not instance_exists(obj_pistol){
+		instance_create_layer(x,y-8,"Instances",obj_pistol)
 	}
-	if weapon = obj_shotgun{
-		if not instance_exists(obj_shotgun){
-			instance_create_layer(x,y-8,"Instances",obj_shotgun)
-		}
+}
+if weapon = obj_shotgun {
+	if not instance_exists(obj_shotgun){
+		instance_create_layer(x,y-8,"Instances",obj_shotgun)
 	}
+}
+if weapon = obj_rpg {
+	if not instance_exists(obj_rpg){
+		instance_create_layer(x,y-8,"Instances",obj_rpg)
+	}
+}
 
 
 if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 		bullets_left -= 1
 		if weapon == obj_pistol { old_clips[0] = bullets_left }
 		else if weapon == obj_shotgun { old_clips[1] = bullets_left }
-		//RPG here
+		else if weapon == obj_rpg { old_clips[2] = bullets_left }
+		
 		canShoot = false //Cannot shoot until alarm 0 runs out (time between shots)
 		propel = true
 		
@@ -74,12 +95,33 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 						image_yscale : 0.5,
 					}) }
 		}
+		if weapon = obj_rpg{
+			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
+			repeat(weapon_stats.num_bullets) { 
+				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
+				instance_create_layer(x+6,y-8,"Instances", bullet, //Create bullet instances
+					{
+						//Pass in creation variables to bullets
+						speed : 16,
+						direction : angle,
+						image_angle : angle,
+						damage : weapon_stats.damage,
+						image_xscale : 0.5,
+						image_yscale : 0.5,
+					}) }
+		}
 
 		if bullets_left == 0 { //No bullets left in clip, reload
 			alarm[1] = weapon_stats.reload_time
 			global.draw_reload = true
 		}
 }
+
+//Reload if out of bullets and mouse pressed
+else if mouse_check_button(mb_left) and bullets_left == 0 and weapon != noone and not global.draw_reload { 
+	alarm[1] = weapon_stats.reload_time
+	global.draw_reload = true 
+	}
 //Left/right movement handling
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
