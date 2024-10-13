@@ -50,9 +50,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
+    "name":"spr_idle_1_arm",
+    "path":"sprites/spr_idle_1_arm/spr_idle_1_arm.yy",
+  },
+  "spriteMaskId":{
     "name":"spr_character_idle",
     "path":"sprites/spr_character_idle/spr_character_idle.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }
