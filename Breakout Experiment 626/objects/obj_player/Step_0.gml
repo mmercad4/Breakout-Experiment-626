@@ -125,19 +125,26 @@ else if mouse_check_button(mb_left) and bullets_left == 0 and weapon != noone an
 //Left/right movement handling
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
+	
+	sprite_index = spr_walk_1_arm
 	image_xscale = 1
 	
 	if input_accel < 2 { input_accel += 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
+	
 }
 
 else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, self.bbox_top+sign(jump_speed), self.bbox_right-1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) { 
+	sprite_index = spr_walk_1_arm
 	image_xscale = -1
 	
 	if input_accel > -2 { input_accel -= 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
-else { input_accel = 0 } //No acceleration in either direction if there's no left/right input being made
+else { 
+	input_accel = 0 
+	if (not isJump){sprite_index = spr_idle_1_arm}
+	} //No acceleration in either direction if there's no left/right input being made
 
 if (not keyboard_check(ord("D")) and not keyboard_check(ord("A")) and move_speed != 0) { move_speed -= sign(move_speed) } //Decceleration— if no input, deccelerate the player.
 if acceleration == 0 and move_speed > -1 and move_speed < 1 { move_speed = 0 } //Round move_speed to 0 if it's a decimal between -1 and 1 (leaving this out causes the player to jitter back and forth otherwise)
@@ -157,15 +164,21 @@ move_speed += acceleration //Add acceleration to move_speed
 move_speed = clamp(move_speed, -max_move, max_move) //Cap horizontal movement speed
 input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
+if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1	} //If the player is not standing on the ground, accelerate them downwards
 
-if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1 } //If the player is not standing on the ground, accelerate them downwards
+if (isJump and instance_place(x,y+1,obj_block)){
+	isJump = false
+}
 
 //Jumping //TODO SET Jumping Sprite
 if (keyboard_check_pressed(vk_space)) {
 	if (instance_place(x,y+1,obj_block) or collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) {
+		isJump = true
+		sprite_index = spr_jump_1_arm
 		jump_speed = jump_height
 		}
-} 
+}
+
 
 //Deccelerate the player's gun acceleration
 if gun_accel_x != 0 { gun_accel_x -= sign(gun_accel_x) }
