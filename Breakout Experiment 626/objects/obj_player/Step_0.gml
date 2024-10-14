@@ -274,3 +274,15 @@ if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed,obj_one_way
 //Change x and y by their respective movement variables. Effectively the same as using hspeed/vspeed
 x += move_speed 
 y += jump_speed
+
+//shader code
+
+if(ishit){
+	hit_timer += 1
+	if(hit_timer > hit_release){
+		ishit = false
+	}
+}
+else{
+	hit_timer = 0
+}
