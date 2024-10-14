@@ -4,6 +4,11 @@
 if instance_exists(obj_player){
 	x = obj_player.x +3
 	y = obj_player.y
+	
+	if (obj_player.weapon_equipped){
+		visible = true
+	}
+	else{ visible = false}
 }
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 if image_angle > 90 and image_angle < 270{

@@ -4,6 +4,7 @@ if hp <= 0 {
 if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
 //Switch weapon and bullet type if not reloading
 if keyboard_check_pressed(ord("1")) and pistol_unlocked {
+	weapon_equipped = true
 	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_pistol
 	bullet = obj_pistol_bullet
@@ -15,6 +16,7 @@ if keyboard_check_pressed(ord("1")) and pistol_unlocked {
 	global.draw_reload = false
 }
 if keyboard_check_pressed(ord("2")) and shotgun_unlocked {
+	weapon_equipped = true
 	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_shotgun
 	bullet = obj_shotgun_bullet
@@ -26,6 +28,7 @@ if keyboard_check_pressed(ord("2")) and shotgun_unlocked {
 	global.draw_reload = false
 }
 if keyboard_check_pressed(ord("3")) and rpg_unlocked {
+	weapon_equipped = true
 	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_rpg
 	bullet = obj_rocket
@@ -43,16 +46,19 @@ propel = false
 //Weapon showing
 if weapon = obj_pistol {
 	if not instance_exists(obj_pistol){
+		weapon_equipped = true
 		instance_create_layer(x,y-8,"Instances",obj_pistol)
 	}
 }
 if weapon = obj_shotgun {
 	if not instance_exists(obj_shotgun){
+		weapon_equipped = true
 		instance_create_layer(x,y-8,"Instances",obj_shotgun)
 	}
 }
 if weapon = obj_rpg {
 	if not instance_exists(obj_rpg){
+		weapon_equipped = true
 		instance_create_layer(x,y-8,"Instances",obj_rpg)
 	}
 }
@@ -129,6 +135,10 @@ else if mouse_check_button(mb_left) and bullets_left == 0 and weapon != noone an
 //Left/right movement handling
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
+	if (not isJump) {
+		if (weapon_equipped){sprite_index = spr_walk_1_arm}
+		else {sprite_index = spr_character_walk}
+	}
 	image_xscale = 1
 	
 	if input_accel < 2 { input_accel += 0.5 } //Max acceleration (from player input) is 2
@@ -136,12 +146,22 @@ if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbo
 }
 
 else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, self.bbox_top+sign(jump_speed), self.bbox_right-1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) { 
+	if (not isJump) {
+		if (weapon_equipped){sprite_index = spr_walk_1_arm}
+		else {sprite_index = spr_character_walk}
+	}
 	image_xscale = -1
 	
 	if input_accel > -2 { input_accel -= 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
-else { input_accel = 0 } //No acceleration in either direction if there's no left/right input being made
+else { 
+	if (not isJump) {
+		if (weapon_equipped){sprite_index = spr_idle_1_arm}
+		else {sprite_index = spr_character_idle}
+	}
+	input_accel = 0 
+} //No acceleration in either direction if there's no left/right input being made
 
 if (not keyboard_check(ord("D")) and not keyboard_check(ord("A")) and move_speed != 0) { move_speed -= sign(move_speed) } //Decceleration— if no input, deccelerate the player.
 if acceleration == 0 and move_speed > -1 and move_speed < 1 { move_speed = 0 } //Round move_speed to 0 if it's a decimal between -1 and 1 (leaving this out causes the player to jitter back and forth otherwise)
@@ -164,9 +184,17 @@ input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
 if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1 } //If the player is not standing on the ground, accelerate them downwards
 
+if (isJump and instance_place(x,y+1,obj_block)){
+	isJump = false
+}
+
+
 //Jumping //TODO SET Jumping Sprite
 if (keyboard_check_pressed(vk_space)) {
 	if (instance_place(x,y+1,obj_block) or collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) {
+		isJump = true
+		if(weapon_equipped){sprite_index = spr_jump_1_arm}
+		else{sprite_index = spr_character_jump}
 		jump_speed = jump_height
 		}
 } 

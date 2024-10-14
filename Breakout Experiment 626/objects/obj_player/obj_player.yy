@@ -49,14 +49,18 @@
     {"$GMObjectProperty":"v1","%Name":"pistol_unlocked","filters":[],"listItems":[],"multiselect":false,"name":"pistol_unlocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"shotgun_unlocked","filters":[],"listItems":[],"multiselect":false,"name":"shotgun_unlocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"rpg_unlocked","filters":[],"listItems":[],"multiselect":false,"name":"rpg_unlocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"weapon_equipped","filters":[],"listItems":[],"multiselect":false,"name":"weapon_equipped","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_idle_1_arm",
-    "path":"sprites/spr_idle_1_arm/spr_idle_1_arm.yy",
+    "name":"spr_character_idle",
+    "path":"sprites/spr_character_idle/spr_character_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_character_idle",
+    "path":"sprites/spr_character_idle/spr_character_idle.yy",
+  },
   "visible":true,
 }

@@ -35,5 +35,5 @@
     "path":"sprites/spr_arm2/spr_arm2.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

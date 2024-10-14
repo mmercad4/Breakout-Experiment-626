@@ -3,3 +3,7 @@
 if instance_exists(obj_player){
 	player_hp = obj_player.hp
 }
+else{
+	// GO TO GAME OVER SCREEN
+	game_restart()
+}

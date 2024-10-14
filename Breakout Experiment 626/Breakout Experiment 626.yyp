@@ -186,6 +186,7 @@
     {"id":{"name":"spr_character_idle","path":"sprites/spr_character_idle/spr_character_idle.yy",},},
     {"id":{"name":"spr_character_jump","path":"sprites/spr_character_jump/spr_character_jump.yy",},},
     {"id":{"name":"spr_character_run","path":"sprites/spr_character_run/spr_character_run.yy",},},
+    {"id":{"name":"spr_character_walk","path":"sprites/spr_character_walk/spr_character_walk.yy",},},
     {"id":{"name":"spr_drone_death","path":"sprites/spr_drone_death/spr_drone_death.yy",},},
     {"id":{"name":"spr_drone_flying","path":"sprites/spr_drone_flying/spr_drone_flying.yy",},},
     {"id":{"name":"spr_drone_idle","path":"sprites/spr_drone_idle/spr_drone_idle.yy",},},
