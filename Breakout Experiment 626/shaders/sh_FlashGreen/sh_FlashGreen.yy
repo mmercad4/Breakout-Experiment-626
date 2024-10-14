@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"sh_FlashGreen",
+  "name":"sh_FlashGreen",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

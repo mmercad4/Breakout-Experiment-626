@@ -116,6 +116,8 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"arena_funcs","path":"scripts/arena_funcs/arena_funcs.yy",},},
     {"id":{"name":"switch_weapons","path":"scripts/switch_weapons/switch_weapons.yy",},},
+    {"id":{"name":"sh_FlashGreen","path":"shaders/sh_FlashGreen/sh_FlashGreen.yy",},},
+    {"id":{"name":"sh_FlashRed","path":"shaders/sh_FlashRed/sh_FlashRed.yy",},},
     {"id":{"name":"snd_pistol_shot","path":"sounds/snd_pistol_shot/snd_pistol_shot.yy",},},
     {"id":{"name":"snd_shotgun_shot","path":"sounds/snd_shotgun_shot/snd_shotgun_shot.yy",},},
     {"id":{"name":"snd_theme","path":"sounds/snd_theme/snd_theme.yy",},},
