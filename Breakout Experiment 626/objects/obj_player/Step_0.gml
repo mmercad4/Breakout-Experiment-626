@@ -310,8 +310,6 @@ if(isMelee and image_index >= image_number - 1){ isMelee = false}
 	
 
 
-
-=======
 //shader code
 
 if(ishit){
