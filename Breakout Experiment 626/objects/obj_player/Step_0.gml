@@ -68,6 +68,7 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 		propel = true
 		
 		if weapon = obj_pistol {
+			audio_play_sound(snd_pistol_shot,10,false)
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
@@ -81,6 +82,7 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 					}) }
 		}
 		if weapon = obj_shotgun{
+			audio_play_sound(snd_shotgun_shot,10,false)
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
@@ -126,7 +128,7 @@ else if mouse_check_button(mb_left) and bullets_left == 0 and weapon != noone an
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
 	
-	sprite_index = spr_walk_1_arm
+	if (not isJump) {sprite_index = spr_walk_1_arm}
 	image_xscale = 1
 	
 	if input_accel < 2 { input_accel += 0.5 } //Max acceleration (from player input) is 2
@@ -135,7 +137,7 @@ if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbo
 }
 
 else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, self.bbox_top+sign(jump_speed), self.bbox_right-1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) { 
-	sprite_index = spr_walk_1_arm
+	if (not isJump) {sprite_index = spr_walk_1_arm}
 	image_xscale = -1
 	
 	if input_accel > -2 { input_accel -= 0.5 } //Max acceleration (from player input) is 2
