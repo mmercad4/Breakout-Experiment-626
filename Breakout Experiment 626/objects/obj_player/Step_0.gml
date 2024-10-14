@@ -68,6 +68,7 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 		propel = true
 		
 		if weapon = obj_pistol {
+			audio_play_sound(snd_pistol_shot,10,false)
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
@@ -81,6 +82,7 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 					}) }
 		}
 		if weapon = obj_shotgun{
+			audio_play_sound(snd_shotgun_shot,10,false)
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
@@ -96,6 +98,7 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 					}) }
 		}
 		if weapon = obj_rpg{
+			audio_play_sound(snd_rpg_shot,10,false)
 			alarm[0] = game_get_speed(gamespeed_fps)/weapon_stats.time_between_shots //Set alarm for time between shots
 			repeat(weapon_stats.num_bullets) { 
 				var angle = point_direction(x,y,mouse_x,mouse_y) + random_range(-weapon_stats.spread, weapon_stats.spread)
@@ -112,6 +115,7 @@ if canShoot = true and mouse_check_button(mb_left) and bullets_left > 0 {
 		}
 
 		if bullets_left == 0 { //No bullets left in clip, reload
+			audio_play_sound(snd_shotgun_reload,10,false)
 			alarm[1] = weapon_stats.reload_time
 			global.draw_reload = true
 		}
