@@ -27,7 +27,6 @@
     {"name":"inst_6941A643","path":"rooms/rm_arena1/rm_arena1.yy",},
     {"name":"inst_448F0F5B","path":"rooms/rm_arena1/rm_arena1.yy",},
     {"name":"inst_67547631","path":"rooms/rm_arena1/rm_arena1.yy",},
-    {"name":"inst_3BD02039","path":"rooms/rm_arena1/rm_arena1.yy",},
     {"name":"inst_2B97F029","path":"rooms/rm_arena1/rm_arena1.yy",},
     {"name":"inst_4BC71C6A","path":"rooms/rm_arena1/rm_arena1.yy",},
     {"name":"inst_31328119","path":"rooms/rm_arena1/rm_arena1.yy",},
@@ -50,7 +49,6 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1105.0,"y":320.0,},
       ],"layers":[],"name":"Cameras","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_3BD02039","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BD02039","objectId":{"name":"obj_arm","path":"objects/obj_arm/obj_arm.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":672.0,},
         {"$GMRInstance":"v1","%Name":"inst_2B97F029","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2B97F029","objectId":{"name":"obj_bot_enemy","path":"objects/obj_bot_enemy/obj_bot_enemy.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"enemy2_path","path":"paths/enemy2_path/enemy2_path.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"enemy2_path",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":416.0,},
