@@ -4,6 +4,7 @@
 if instance_exists(obj_player){
 	x = obj_player.x +3
 	y = obj_player.y
+	depth = obj_player.depth + 1
 	
 	if (obj_player.weapon_equipped){
 		visible = true
