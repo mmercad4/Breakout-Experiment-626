@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_shotgun",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_shotgun",
   "overriddenProperties":[],
@@ -11,7 +9,10 @@
     "name":"Weapon_Objects",
     "path":"folders/Objects/Weapon_Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pistol",
+    "path":"objects/obj_pistol/obj_pistol.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

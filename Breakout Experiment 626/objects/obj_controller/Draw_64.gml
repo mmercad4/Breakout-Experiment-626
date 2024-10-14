@@ -41,21 +41,21 @@ else if obj_player.weapon == obj_rpg {
 	var txt = "RPG"
 }
 if obj_player.weapon != noone {
-	draw_sprite_ext(object_get_sprite(obj_player.weapon),0,1700,50,5,5,0,c_white,1)
+	draw_sprite_ext(object_get_sprite(obj_player.weapon),0,1200,85,5,5,0,c_white,1)
 	draw_set_color(c_white)
 	draw_text_ext_transformed(1700,75,txt,5,1000,3,3,0)
 }
 var xx = 1000
-var yy = 50
+var yy = 70
 //Draw reload timer (if reloading)
 if global.draw_reload {
 	draw_text_ext_transformed(xx,yy,"Reloading",5,1000,3,3,0)
-	draw_rectangle(xx+100,yy - 8, xx+0.5*(obj_player.weapon_stats.reload_time)+101, yy - 3,true) //Draw bounding box
-	draw_rectangle(xx+100,yy - 8, xx+obj_player.alarm[1]*0.5+100,yy - 3,false)
+	draw_rectangle(xx-35,yy + 45, xx+0.5*(obj_player.weapon_stats.reload_time)-35, yy + 35,true) //Draw bounding box
+	draw_rectangle(xx-35,yy + 45, xx+obj_player.alarm[1]*0.5-35,yy + 35,false)
 }
 
-var xx = 1500
-var yy = 50
+var xx = 1000
+var yy = 20
 //Draw bullets left in clip
 var txt = string(obj_player.bullets_left) + "/" + string(obj_player.weapon_stats.clip_size)
 draw_text_ext_transformed(xx,yy+10,txt,5,1000,3,3,0)

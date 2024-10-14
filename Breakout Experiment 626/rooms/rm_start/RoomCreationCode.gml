@@ -9,4 +9,4 @@ catch( _exception) {
 global.load_timer = 240 //Time til the player is allowed to go into the next room
 
 //starting room only— make game fullscreen
-window_set_fullscreen(true)
+//window_set_fullscreen(true)

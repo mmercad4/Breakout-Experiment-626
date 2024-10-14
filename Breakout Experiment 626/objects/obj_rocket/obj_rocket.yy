@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bullet5_1",
-    "path":"sprites/spr_bullet5_1/spr_bullet5_1.yy",
+    "name":"spr_bullet5_1_1",
+    "path":"sprites/spr_bullet5_1_1/spr_bullet5_1_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
