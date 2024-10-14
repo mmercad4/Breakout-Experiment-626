@@ -311,3 +311,15 @@ if(isMelee and image_index >= image_number - 1){ isMelee = false}
 
 
 
+=======
+//shader code
+
+if(ishit){
+	hit_timer += 1
+	if(hit_timer > hit_release){
+		ishit = false
+	}
+}
+else{
+	hit_timer = 0
+}
