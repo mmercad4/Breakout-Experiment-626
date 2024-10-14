@@ -102,6 +102,7 @@
     {"id":{"name":"obj_sliding_door","path":"objects/obj_sliding_door/obj_sliding_door.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"obj_unlocker","path":"objects/obj_unlocker/obj_unlocker.yy",},},
+    {"id":{"name":"ParticleSystem1","path":"particles/ParticleSystem1/ParticleSystem1.yy",},},
     {"id":{"name":"enemy1_path","path":"paths/enemy1_path/enemy1_path.yy",},},
     {"id":{"name":"enemy2_path","path":"paths/enemy2_path/enemy2_path.yy",},},
     {"id":{"name":"enemy3_path","path":"paths/enemy3_path/enemy3_path.yy",},},
@@ -272,7 +273,6 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
     {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_arena1","path":"rooms/rm_arena1/rm_arena1.yy",},},
@@ -280,6 +280,7 @@
     {"roomId":{"name":"rm_arena2_3","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},},
     {"roomId":{"name":"rm_arena3","path":"rooms/rm_arena3/rm_arena3.yy",},},
     {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
+    {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType":"game",
