@@ -5,6 +5,7 @@ if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed t
 //Switch weapon and bullet type if not reloading
 if keyboard_check_pressed(ord("1")) and pistol_unlocked {
 	weapon_equipped = true
+	canShoot = true
 	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_pistol
 	bullet = obj_pistol_bullet
@@ -17,6 +18,7 @@ if keyboard_check_pressed(ord("1")) and pistol_unlocked {
 }
 if keyboard_check_pressed(ord("2")) and shotgun_unlocked {
 	weapon_equipped = true
+	canShoot = true
 	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_shotgun
 	bullet = obj_shotgun_bullet
@@ -29,6 +31,7 @@ if keyboard_check_pressed(ord("2")) and shotgun_unlocked {
 }
 if keyboard_check_pressed(ord("3")) and rpg_unlocked {
 	weapon_equipped = true
+	canShoot = true
 	if instance_exists(weapon) { instance_destroy(weapon) }
 	weapon = obj_rpg
 	bullet = obj_rocket
@@ -39,27 +42,39 @@ if keyboard_check_pressed(ord("3")) and rpg_unlocked {
 	alarm[1] = 0
 	global.draw_reload = false
 }
+if keyboard_check_pressed(ord("0")){
+	weapon_equipped = false
+	weapon = noone
+	canShoot = false
+	
+	if(instance_exists(obj_pistol)){obj_pistol.visible = false}
+	if(instance_exists(obj_shotgun)){obj_shotgun.visible = false}
+	if(instance_exists(obj_rpg)){obj_rpg.visible = false}
+}
 
 //SET WEAPON STATS BASED ON CURRENT WEAPON
 propel = false
 
 //Weapon showing
-if weapon = obj_pistol {
+if weapon == obj_pistol {
 	if not instance_exists(obj_pistol){
 		weapon_equipped = true
 		instance_create_layer(x,y-8,"Instances",obj_pistol)
+		obj_pistol.visible = true
 	}
 }
-if weapon = obj_shotgun {
+if weapon == obj_shotgun {
 	if not instance_exists(obj_shotgun){
 		weapon_equipped = true
 		instance_create_layer(x,y-8,"Instances",obj_shotgun)
+		obj_shotgun.visible = true
 	}
 }
-if weapon = obj_rpg {
+if weapon == obj_rpg {
 	if not instance_exists(obj_rpg){
 		weapon_equipped = true
 		instance_create_layer(x,y-8,"Instances",obj_rpg)
+		obj_rpg.visible = true
 	}
 }
 
@@ -135,28 +150,26 @@ else if mouse_check_button(mb_left) and bullets_left == 0 and weapon != noone an
 //Left/right movement handling
 //Cast a rectangle collision to the left/right (depending on input direction) pixel of the player. Only accelerate that way if there's no block there.
 if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbox_top+sign(jump_speed), self.bbox_right+1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) {
-	if (not isJump) {
+	if (not isJump and not isMelee) {
 		if (weapon_equipped){sprite_index = spr_walk_1_arm}
 		else {sprite_index = spr_character_walk}
 	}
-	image_xscale = 1
 	
 	if input_accel < 2 { input_accel += 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
 
 else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, self.bbox_top+sign(jump_speed), self.bbox_right-1, self.bbox_bottom+sign(jump_speed), obj_block, true, true)) { 
-	if (not isJump) {
+	if (not isJump and not isMelee) {
 		if (weapon_equipped){sprite_index = spr_walk_1_arm}
 		else {sprite_index = spr_character_walk}
 	}
-	image_xscale = -1
 	
 	if input_accel > -2 { input_accel -= 0.5 } //Max acceleration (from player input) is 2
 	if abs(move_speed+input_accel) > max_input_move { input_accel = 0 } //Stop accelerating if the next step forward would cause the player to accelerate beyond their max speed
 }
 else { 
-	if (not isJump) {
+	if (not isJump and not isMelee) {
 		if (weapon_equipped){sprite_index = spr_idle_1_arm}
 		else {sprite_index = spr_character_idle}
 	}
@@ -275,6 +288,30 @@ if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed,obj_one_way
 x += move_speed 
 y += jump_speed
 
+// Flips sprite based on side the mouse is on
+if (mouse_x < x) {
+    image_xscale = -1;
+	meleeOffset = -15;
+} else {
+    image_xscale = 1;
+	meleeOffset = 15;
+}
+
+if (not weapon_equipped and mouse_check_button_pressed(mb_left)){
+
+	isMelee = true
+	sprite_index = spr_character_melee
+	image_index = 0
+	instance_create_layer(x+meleeOffset, y, "Instances", obj_melee_hitbox)
+	
+}
+
+if(isMelee and image_index >= image_number - 1){ isMelee = false}
+	
+
+
+
+=======
 //shader code
 
 if(ishit){

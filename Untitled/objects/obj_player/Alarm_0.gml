@@ -1,0 +1,2 @@
+//ALARM FOR TIME BETWEEN SHOTS
+canShoot = true
