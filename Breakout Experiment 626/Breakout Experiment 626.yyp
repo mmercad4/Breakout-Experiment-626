@@ -280,8 +280,8 @@
     {"roomId":{"name":"rm_arena2_3","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},},
     {"roomId":{"name":"rm_arena3","path":"rooms/rm_arena3/rm_arena3.yy",},},
     {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
-    {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
