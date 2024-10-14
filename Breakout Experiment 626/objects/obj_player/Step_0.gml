@@ -122,7 +122,7 @@ input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
 if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1	} //If the player is not standing on the ground, accelerate them downwards
 
-if (isJump and instance_place(x,y+1,obj_block)){
+if (isJump and instance_place(x,y+1,obj_block) or instance_place(x,y+1,obj_one_way_plat)){
 	isJump = false
 }
 
@@ -213,3 +213,13 @@ if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed-1,obj_one_w
 //Change x and y by their respective movement variables. Effectively the same as using hspeed/vspeed
 x += move_speed 
 y += jump_speed
+
+if(ishit){
+	hit_timer += 1
+	if(hit_timer > hit_release){
+		ishit = false
+	}
+}
+else{
+	hit_timer = 0
+}

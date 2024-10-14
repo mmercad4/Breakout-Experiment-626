@@ -28,3 +28,4 @@ draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, false);
 draw_set_color(c_green); // Foreground color (representing current health)
 draw_rectangle(bar_x, bar_y, bar_x + current_bar_width, bar_y + bar_height, false);
 }
+

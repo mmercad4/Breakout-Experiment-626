@@ -22,3 +22,13 @@ if (instance_exists(obj_player)) {
         alarm[0] = -1; // Disable the shooting alarm
     }
 }
+
+if(ishit){
+	hit_timer += 1
+	if(hit_timer > hit_release){
+		ishit = false
+	}
+}
+else{
+	hit_timer = 0
+}
