@@ -1,0 +1,339 @@
+[33mcommit 8ee41b820f234a1dc1c0d081b82d7c8c58a2ccd0[m[33m ([m[1;36mHEAD -> [m[1;32mmain-gui-work-merge-conflicts[m[33m, [m[1;31morigin/main-gui-work-merge-conflicts[m[33m)[m
+Merge: fe9dfe0 863eb14
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Sun Oct 13 20:10:20 2024 -0400
+
+    Merge pull request #10 from mmercad4/fixed-gui-work
+    
+    Fixed gui work
+
+[33mcommit 863eb146f7fb61963be3b4131a588fc54f97cb14[m[33m ([m[1;31morigin/fixed-gui-work[m[33m)[m
+Merge: 13c45ed fe9dfe0
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Sun Oct 13 20:10:10 2024 -0400
+
+    Merge branch 'main-gui-work-merge-conflicts' into fixed-gui-work
+
+[33mcommit fe9dfe0948563cfee20165fb2a6feee64da0a173[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: dff7ee9 c0b2c08
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Sun Oct 13 18:56:48 2024 -0400
+
+    Merge pull request #7 from mmercad4/filled-in-tiles-and-adjusted-blocks
+    
+    Filled in tiles and adjusted blocks
+
+[33mcommit 13c45ed9fb75c2f3389a6fc158ee1082375e7ef2[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Sun Oct 13 17:23:30 2024 -0400
+
+    feat: RPG and destructible blocks
+    
+    Added RPG and blocks that can only be destroyed by its explosions.
+
+[33mcommit 26fd90065494b9bea1d7bf223af1958d26d0ccc7[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Sun Oct 13 11:52:11 2024 -0400
+
+    feat: gui and unlocking system
+    
+    Made a simple GUI
+    Made clips sizes and reloading, accounting for switching between guns
+    Player starts with no guns unlocked
+    Added objects that allow player to unlock new guns
+
+[33mcommit c0b2c08867fa705cf5f2416e68b8bd8d1b000ea0[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Sat Oct 12 19:33:59 2024 -0400
+
+    Edited Animation and added arm
+    
+    Edited Animation to match movement and added arm to attack to gun
+
+[33mcommit 1a7507c791128fd1e856de9988a2b4807927bd54[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Sat Oct 12 16:51:13 2024 -0400
+
+    Fixed Sliding Door, Added More Sprites
+    
+    Fixed the sliding doors. Added RPG sprite and rpg ammo sprite. Added more sprites for character.
+
+[33mcommit c22a504e640057116da9c085069158cbf4ca5cdb[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Sat Oct 12 15:07:38 2024 -0400
+
+    Filled in tiles and adjusted blocks
+    
+    Filled in tiles and adjusted blocks.
+
+[33mcommit 66653e81086f0af26e1f4faf83be746d68c72e63[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Fri Oct 11 08:35:37 2024 -0400
+
+    feat: laser does damage
+
+[33mcommit dff7ee9b0dcf506571a0e3a3b49d234d133ebeca[m[33m ([m[1;32mgui-work[m[33m)[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Fri Oct 11 08:33:04 2024 -0400
+
+    feat: fixed camera, added obj_controller
+
+[33mcommit 3f05a363f471975f2e631523375076907dbe2608[m[33m ([m[1;31morigin/conflict-resolution-visible-weapons[m[33m, [m[1;32mconflict-resolution-visible-weapons[m[33m)[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Fri Oct 11 08:17:07 2024 -0400
+
+    changed main room
+
+[33mcommit 13385ad47908bbfee04dce7e978562f74012927b[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Fri Oct 11 08:15:46 2024 -0400
+
+    merged changes
+
+[33mcommit 5938dd1e8c6fbc093c819e41d95dc614764ac0eb[m
+Merge: 2e962e0 68abe19
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Fri Oct 11 08:08:15 2024 -0400
+
+    fixed merge conflicts
+
+[33mcommit 2e962e0dc2d2aa36887f0efd86d3796e82cc2600[m[33m ([m[1;31morigin/implement-new-enemies[m[33m, [m[1;32mimplement-new-enemies[m[33m)[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 16:10:49 2024 -0400
+
+    fixed enemies firing when there is a wall in between the enemy and the player
+
+[33mcommit 67fd4106e6a17f8c3eb831270dc8f8cf279b4f1f[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 15:45:38 2024 -0400
+
+    Added more enemies
+
+[33mcommit 68abe196c7064f6ac5cd9b91a8da48bdb09b5007[m[33m ([m[1;31morigin/visible_weapons[m[33m)[m
+Author: JayKondapa <jkondapa@charlotte.edu>
+Date:   Wed Oct 9 13:41:14 2024 -0400
+
+    weapon point to mouse and kickback only for shotguns
+
+[33mcommit d2cf2b69d1477f79513b988ab4d9fac5e0eb0600[m[33m ([m[1;31morigin/created-enemy-object-inheritance[m[33m, [m[1;32mcreated-enemy-object-inheritance[m[33m)[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 12:18:10 2024 -0400
+
+    finalized object inheritance for enemies
+
+[33mcommit 90c6645b404d6ba0743043800971cc2dc66a0ff2[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 12:12:09 2024 -0400
+
+    fixed bullet object for enemy
+
+[33mcommit 1d206317e827cfecad763b9d6d48bf92349f9847[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 12:09:31 2024 -0400
+
+    Created an enemy object and enemy patroller that is more inheritable
+
+[33mcommit 8f2d06517454fddd2c08786b540a1c8cf522550d[m[33m ([m[1;31morigin/conflict-resolution-map-branch[m[33m, [m[1;32mconflict-resolution-map-branch[m[33m)[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 10:49:28 2024 -0400
+
+    viewport 0 enabled
+
+[33mcommit 0c9d4365e6610e9414ee7ba7460b9e832d10a44c[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Oct 9 10:05:14 2024 -0400
+
+    ready to merge with main
+
+[33mcommit c350b326970caec9f23c4d4ad24860922a889983[m
+Merge: cf9f480 ce6b3d7
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Tue Oct 8 20:55:51 2024 -0400
+
+    resolved merged conflicts
+
+[33mcommit cf9f480cb0b8e118d75a1b6ac520c5a410332000[m
+Merge: d918027 7a189b7
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Tue Oct 8 18:45:16 2024 -0400
+
+    Merge pull request #5 from mmercad4/feature-monster_and_character_health
+    
+    Feature monster and character health
+
+[33mcommit ce6b3d76e2500a47a4e8867cde214c2261e09841[m[33m ([m[1;31morigin/map-work[m[33m, [m[1;32mmap-work[m[33m)[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Tue Oct 8 14:37:46 2024 -0400
+
+    feat: finished rough layout of the entire level
+    
+    Need to merge with main to get working enemies, and finish building out all the encounters
+    Also need to align tiles with grid to start on the tileset.
+
+[33mcommit f4e2cdaa87651d2d4bc7a3e63ab3d77487647699[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Sun Oct 6 11:45:35 2024 -0400
+
+    feat: updated map and level systems
+    
+    — Added objects to go between rooms
+    — Added fixed camera system
+    — Added doors and arena systems
+    — Rough layouts of most of the rooms
+    Using a moving camera caused some strange issues with how the gun aims at the mouse cursor. I couldn't find any  quick solutions to it at the time, so I implemented a quick fixed camera system instead.
+
+[33mcommit 7a189b7ee4c253becd0272aa3334a7500bc3c672[m[33m ([m[1;31morigin/feature-monster_and_character_health[m[33m, [m[1;32mfeature-monster_and_character_health[m[33m)[m
+Author: JayKondapa <jkondapa@charlotte.edu>
+Date:   Fri Oct 4 08:58:33 2024 -0400
+
+    enem_health
+
+[33mcommit 702d93f44409b6f4211fe6f886cd67bdabb536ec[m
+Author: JayKondapa <jkondapa@charlotte.edu>
+Date:   Wed Oct 2 18:29:44 2024 -0400
+
+    debugged enemy health
+
+[33mcommit 3014fa94950c00bc99654d51943980bd4ae89837[m[33m ([m[1;31morigin/debuging_damage[m[33m)[m
+Author: Marco Mercado <mmercad4@uncc.edu>
+Date:   Wed Oct 2 17:40:49 2024 -0400
+
+    Added health bars and collision
+
+[33mcommit d91802786c64ea22b9f1008a41acd4567e895e51[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Sat Sep 28 18:49:51 2024 -0400
+
+    Unchecked Snap to Grid
+    
+    Unchecked snap to grid so now we can move the objects freely.
+
+[33mcommit b4a9aec5e0c374f3fcfa0feb4adde8a3c9eae368[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Sat Sep 28 18:25:35 2024 -0400
+
+    Tilesets and Background
+    
+    Added tileset and background.
+
+[33mcommit cf462813fbab1c65f7146a8eb3b260d756848587[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Sat Sep 28 11:26:31 2024 -0400
+
+    fixed obj_bullet not existing, added variables to control weapon stats
+
+[33mcommit 506e744adb039549e2ba951331dde1253de5dac3[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Fri Sep 27 15:53:29 2024 -0400
+
+    Fixed Sprites
+    
+    fixed sprites
+
+[33mcommit 79a1a35c08caf3413ee6abe589bac90a38c8723b[m
+Merge: 15d0250 454cb3a
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Thu Sep 26 13:50:42 2024 -0400
+
+    Merge pull request #4 from mmercad4/feature_weapon_switching
+    
+    implemented weapon switching and fire-rate
+
+[33mcommit 454cb3a8fe97aea67f31ff079ef60ebc3d5d8f9c[m[33m ([m[1;31morigin/feature_weapon_switching[m[33m)[m
+Merge: b23b612 15d0250
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Thu Sep 26 13:50:01 2024 -0400
+
+    Merge branch 'main' into feature_weapon_switching
+
+[33mcommit b23b612be0e50f1d4b435f2c6d5ed3c3461f9201[m
+Author: JayKondapa <jkondapa@charlotte.edu>
+Date:   Wed Sep 25 19:24:34 2024 -0400
+
+    implemented weapon switching and fire-rate
+
+[33mcommit 15d0250143cea85f71cfdb90ad7231760795f52c[m
+Merge: c43a223 69334bc
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Sep 25 19:00:23 2024 -0400
+
+    Merge pull request #3 from mmercad4/feautre_implement_obj_patroller_in_rm_testing
+    
+    implemented two enemies into rm_testing
+
+[33mcommit 69334bc33efb3e7d37b562c58695b4f60bf46aa9[m[33m ([m[1;31morigin/feautre_implement_obj_patroller_in_rm_testing[m[33m, [m[1;32mfeautre_implement_obj_patroller_in_rm_testing[m[33m)[m
+Author: Marco Mercado <mmercad4@uncc.edu>
+Date:   Wed Sep 25 18:59:02 2024 -0400
+
+    implemented two enemies into rm_testing
+
+[33mcommit c43a223db3a43d32f5905fe87522e46fb00f6792[m
+Merge: 325e027 66e5508
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Wed Sep 25 18:02:46 2024 -0400
+
+    Merge pull request #2 from mmercad4/player_controller_testing
+    
+    feat: character controller and hazards
+
+[33mcommit 66e55084bfa88c6320074432c36d97fdb34b3d10[m[33m ([m[1;31morigin/player_controller_testing[m[33m)[m
+Author: tmacdoug <tmacdoug@uncc.edu>
+Date:   Wed Sep 25 10:07:54 2024 -0400
+
+    feat: character controller and hazards
+    
+    Added:
+    -Character controller with gun movement and handling for high-speed collisions
+    -Floors/walls/ceilings, and objects that can inherit from those to add features (such as damaging the player on contact and bouncing them backwards)
+    
+    Character controller is a bit long, but comments should explain everything clearly.
+
+[33mcommit 325e027dc4cfadab110b4a2d27e4d21369a8848b[m
+Merge: 89aca42 436f3d5
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Tue Sep 24 21:00:29 2024 -0400
+
+    Merge pull request #1 from mmercad4/feature_enemy_movement
+    
+    Created an enemy object with a path
+
+[33mcommit 436f3d5fe200e7c83c283b9d2e85d5386c2d3787[m[33m ([m[1;31morigin/feature_enemy_movement[m[33m, [m[1;32mfeature_enemy_movement[m[33m)[m
+Merge: 520f63c 89aca42
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Tue Sep 24 20:59:53 2024 -0400
+
+    Merge branch 'main' into feature_enemy_movement
+
+[33mcommit 520f63c9630f1092c170a05acbd124715089ed6e[m
+Author: Marco Mercado <mmercad4@uncc.edu>
+Date:   Tue Sep 24 20:51:38 2024 -0400
+
+    Created an enemy object with a path
+
+[33mcommit 89aca42a3e18a4d670e748c2e39415f95ac2b84c[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Mon Sep 23 08:59:16 2024 -0400
+
+    added sprites
+    
+    Added some sprites. Will add more later along with tiles.
+
+[33mcommit a5967d4bb40290a56dbb173dae6c5e612bb8088a[m
+Author: syang68 <syang68@charlotte.edu>
+Date:   Mon Sep 23 08:44:15 2024 -0400
+
+    test
+    
+    test
+
+[33mcommit 7bbe0e19ba88ddefe67bab07d293bb881ac5f8b7[m
+Author: Marco Mercado <mmercad4@uncc.edu>
+Date:   Fri Sep 20 08:23:48 2024 -0400
+
+    Initialized project
+
+[33mcommit 2c1d503c1b8c3fc47baf6d45962debbdeee886e3[m
+Author: BoredDogDad <63693799+mmercad4@users.noreply.github.com>
+Date:   Fri Sep 20 08:16:34 2024 -0400
+
+    Initial commit
