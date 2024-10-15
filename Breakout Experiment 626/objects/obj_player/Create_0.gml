@@ -1,4 +1,6 @@
 hp = 100
+hp_packs = 3
+
 canShoot = true
 points = 0
 bullets_left = 0
@@ -29,6 +31,11 @@ ishit = false
 hit_timer = 0
 hit_release = room_speed * 0.5
 sh_handle_timer = shader_get_uniform(sh_FlashRed, "utimer")
+
+isheal = false 
+heal_timer = 0
+heal_release = room_speed * 0.5
+sh_handle_timer_heal = shader_get_uniform(sh_FlashGreen, "utimer")
 
 
 

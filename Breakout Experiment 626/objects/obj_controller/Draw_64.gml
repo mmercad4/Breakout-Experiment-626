@@ -30,6 +30,12 @@ draw_rectangle(bar_x, bar_y, bar_x + current_bar_width, bar_y + bar_height, fals
 draw_set_color(c_white);
 draw_text(bar_x + bar_width + 10, bar_y, string(player_hp) + "/" + string(100));
 draw_set_alpha(1)
+
+//Draw health packs TODO replace sprite
+for(i = 0; i<obj_player.hp_packs;i++){
+	draw_sprite(spr_enemy,0,(50+48*i),150)
+}
+
 //Draw gun and label
 
 if (instance_exists(obj_player)){
@@ -63,7 +69,7 @@ if (instance_exists(obj_player)){
 	var yy = 20
 	//Draw bullets left in clip
 	if (obj_player.bullets_left != undefined and obj_player.weapon_stats != undefined){
-		var txt = string(obj_player.bullets_left) + "/" + string(obj_player.weapon_stats.clip_size)
+		var txt = "ammo: " + string(obj_player.bullets_left) + "/" + string(obj_player.weapon_stats.clip_size)
 		draw_text_ext_transformed(xx,yy+10,txt,5,1000,3,3,0)
 	}
 }

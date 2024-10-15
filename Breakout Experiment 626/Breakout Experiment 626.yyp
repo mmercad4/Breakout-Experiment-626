@@ -88,6 +88,7 @@
     {"id":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},},
+    {"id":{"name":"obj_health_pack","path":"objects/obj_health_pack/obj_health_pack.yy",},},
     {"id":{"name":"obj_humanoid_enemy","path":"objects/obj_humanoid_enemy/obj_humanoid_enemy.yy",},},
     {"id":{"name":"obj_label","path":"objects/obj_label/obj_label.yy",},},
     {"id":{"name":"obj_laser","path":"objects/obj_laser/obj_laser.yy",},},
