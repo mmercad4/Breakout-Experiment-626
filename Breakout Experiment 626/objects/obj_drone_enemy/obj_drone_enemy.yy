@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_drone_enemy",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_drone_enemy",
   "overriddenProperties":[
@@ -36,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_drone2_firing1",
-    "path":"sprites/spr_drone2_firing1/spr_drone2_firing1.yy",
+    "name":"spr_drone2_move_forward",
+    "path":"sprites/spr_drone2_move_forward/spr_drone2_move_forward.yy",
   },
   "spriteMaskId":null,
   "visible":true,

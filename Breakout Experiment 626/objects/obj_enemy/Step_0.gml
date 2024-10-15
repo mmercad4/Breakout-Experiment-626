@@ -7,6 +7,16 @@ if hp<=0{
 	instance_destroy()
 }
 
+if (direction > 90 && direction < 270)
+{
+	image_xscale = -1;
+}
+else
+{
+	image_xscale = 1;
+}
+
+
 if (instance_exists(obj_player)) {
     // Calculate distance to the player
     var dist_to_player = distance_to_object(obj_player);

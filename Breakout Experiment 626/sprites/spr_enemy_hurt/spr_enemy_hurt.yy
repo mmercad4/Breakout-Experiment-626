@@ -24,7 +24,7 @@
   ],
   "name":"spr_enemy_hurt",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"Humanoid Sprite",
     "path":"folders/Sprites/Enemy Sprites/Humanoid Sprite.yy",
@@ -79,7 +79,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":15,
     "yorigin":0,
   },
   "swatchColours":null,

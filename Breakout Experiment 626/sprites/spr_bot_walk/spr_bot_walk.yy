@@ -26,7 +26,7 @@
   ],
   "name":"spr_bot_walk",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"Bot 1 Sprite",
     "path":"folders/Sprites/Enemy Sprites/Bot Sprite/Bot 1 Sprite.yy",
@@ -87,7 +87,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":16,
     "yorigin":0,
   },
   "swatchColours":null,

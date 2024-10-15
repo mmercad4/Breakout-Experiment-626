@@ -38,7 +38,7 @@
   ],
   "name":"spr_drone2_firing3",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"Drone 2 Sprite",
     "path":"folders/Sprites/Enemy Sprites/Drone Sprites/Drone 2 Sprite.yy",
@@ -135,7 +135,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":24,
     "yorigin":0,
   },
   "swatchColours":null,

@@ -1,3 +1,5 @@
+/// @description Insert description here
+
 // Step Event for obj_patroller
 
 // Check if the player exists in the room
@@ -31,11 +33,13 @@ if (instance_exists(obj_player)) {
 
         // If no wall is detected (i.e., no object blocking the line of sight), shoot
         if (collision_with_wall == noone) {
+			sprite_index = spr_drone2_firing1
             // Ensure the alarm is active to handle shooting
             if (alarm[0] == -1) { // Check if the alarm is not set
                 alarm[0] = shooting_delay; // Start the shooting alarm
             }
         } else {
+			sprite_index = spr_drone2_move_forward
             // Stop shooting if there is a wall
             alarm[0] = -1; // Disable the shooting alarm
         }

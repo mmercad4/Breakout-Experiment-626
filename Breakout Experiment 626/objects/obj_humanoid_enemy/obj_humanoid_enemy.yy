@@ -3,6 +3,7 @@
   "%Name":"obj_humanoid_enemy",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_melee_hitbox","path":"objects/obj_melee_hitbox/obj_melee_hitbox.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_humanoid_enemy",
@@ -38,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_attack",
-    "path":"sprites/spr_enemy_attack/spr_enemy_attack.yy",
+    "name":"spr_enemy_walk",
+    "path":"sprites/spr_enemy_walk/spr_enemy_walk.yy",
   },
   "spriteMaskId":null,
   "visible":true,
