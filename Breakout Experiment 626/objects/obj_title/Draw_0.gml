@@ -1,7 +1,6 @@
 /// @description Draw Font
 
 //draw_self()
-var text = "Breakout: Experiment 626";
 
 var text_x = room_width / 2;
 var text_y = room_height / 2 - 5 * string_height(text);

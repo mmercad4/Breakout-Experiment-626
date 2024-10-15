@@ -3,7 +3,7 @@
 
 
 x = room_width / 2
-y = room_height / 2
+y = room_height / 2 + button_y_pos * (sprite_get_height(spr_button) + 10)
 
 show_debug_message(x)
 show_debug_message(y)
