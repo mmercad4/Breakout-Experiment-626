@@ -153,6 +153,8 @@ if (keyboard_check(ord("D")) and !collision_rectangle(self.bbox_left+1, self.bbo
 	if (not isJump and not isMelee) {
 		if (weapon_equipped){sprite_index = spr_walk_1_arm}
 		else {sprite_index = spr_character_walk}
+		//particle
+		if instance_exists(obj_Particles){instance_particle_dust.burst(-2);}
 	}
 	
 	if input_accel < 2 { input_accel += 0.5 } //Max acceleration (from player input) is 2
@@ -163,6 +165,8 @@ else if (keyboard_check(ord("A")) and !collision_rectangle(self.bbox_left-1, sel
 	if (not isJump and not isMelee) {
 		if (weapon_equipped){sprite_index = spr_walk_1_arm}
 		else {sprite_index = spr_character_walk}
+		//particle
+		if instance_exists(obj_Particles){instance_particle_dust.burst(-2);}
 	}
 	
 	if input_accel > -2 { input_accel -= 0.5 } //Max acceleration (from player input) is 2
@@ -197,7 +201,7 @@ input_accel = clamp(input_accel, -2, 2) //Cap input acceleration
 
 if (!place_meeting(x,y+1,obj_block) and !collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) { jump_speed += 1 } //If the player is not standing on the ground, accelerate them downwards
 
-if (isJump and instance_place(x,y+1,obj_block)){
+if (isJump and instance_place(x,y+1,obj_block) or instance_place(x,y+1,obj_one_way_plat) ){
 	isJump = false
 }
 
