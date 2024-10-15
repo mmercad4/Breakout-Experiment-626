@@ -216,6 +216,7 @@
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_exclusion_zone_tileset","path":"sprites/spr_exclusion_zone_tileset/spr_exclusion_zone_tileset.yy",},},
     {"id":{"name":"spr_frame_tileset","path":"sprites/spr_frame_tileset/spr_frame_tileset.yy",},},
+    {"id":{"name":"spr_grass_background","path":"sprites/spr_grass_background/spr_grass_background.yy",},},
     {"id":{"name":"spr_gun1_1_1","path":"sprites/spr_gun1_1_1/spr_gun1_1_1.yy",},},
     {"id":{"name":"spr_gun1_1","path":"sprites/spr_gun1_1/spr_gun1_1.yy",},},
     {"id":{"name":"spr_gun1_2","path":"sprites/spr_gun1_2/spr_gun1_2.yy",},},
@@ -241,6 +242,7 @@
     {"id":{"name":"spr_laser","path":"sprites/spr_laser/spr_laser.yy",},},
     {"id":{"name":"spr_melee_hitbox","path":"sprites/spr_melee_hitbox/spr_melee_hitbox.yy",},},
     {"id":{"name":"spr_metal_frame","path":"sprites/spr_metal_frame/spr_metal_frame.yy",},},
+    {"id":{"name":"spr_metal_frame2","path":"sprites/spr_metal_frame2/spr_metal_frame2.yy",},},
     {"id":{"name":"spr_oneway","path":"sprites/spr_oneway/spr_oneway.yy",},},
     {"id":{"name":"spr_panel_background","path":"sprites/spr_panel_background/spr_panel_background.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
@@ -288,7 +290,6 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_win_screen","path":"rooms/rm_win_screen/rm_win_screen.yy",},},
     {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_arena1","path":"rooms/rm_arena1/rm_arena1.yy",},},
@@ -299,6 +300,7 @@
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
     {"roomId":{"name":"rm_game_over_screen","path":"rooms/rm_game_over_screen/rm_game_over_screen.yy",},},
+    {"roomId":{"name":"rm_win_screen","path":"rooms/rm_win_screen/rm_win_screen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
