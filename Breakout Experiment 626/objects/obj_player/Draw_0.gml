@@ -7,6 +7,13 @@ if(ishit){
 	draw_self()
 	shader_reset()
 }
+else if(isheal){
+	shader_set(sh_FlashGreen)
+	
+	shader_set_uniform_f(sh_handle_timer_heal, heal_timer)
+	draw_self()
+	shader_reset()
+}
 else{
 	draw_self()
 }

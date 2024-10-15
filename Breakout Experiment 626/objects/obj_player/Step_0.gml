@@ -1,6 +1,21 @@
 if hp <= 0 {
 	instance_destroy()
 }
+
+if keyboard_check_pressed(ord("H")){
+	if hp_packs >0 {
+		hp_packs -=1
+		if (isheal == false){
+			isheal = true
+			}
+		if hp + 50 < 100{
+			hp += 50
+		}
+		else{
+			hp = 100
+		}
+	}
+}
 if global.load_timer > 0 { global.load_timer-- } //Timer til player is allowed to leave room
 //Switch weapon and bullet type if not reloading
 if keyboard_check_pressed(ord("1")) and pistol_unlocked {
@@ -324,4 +339,14 @@ if(ishit){
 }
 else{
 	hit_timer = 0
+}
+
+if(isheal){
+	heal_timer += 1
+	if(heal_timer > heal_release){
+		isheal = false
+	}
+}
+else{
+	heal_timer = 0
 }
