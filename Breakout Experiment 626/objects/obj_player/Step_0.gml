@@ -274,8 +274,8 @@ if (place_meeting(x+move_speed, y+jump_speed, obj_block)) {
 if (collision_line(x,bbox_bottom,x+move_speed,bbox_bottom+jump_speed,obj_one_way_plat,true,true) and jump_speed > 0) {
 	do {
 		y+=sign(jump_speed)
-		x+=sign(move_speed)
-		show_debug_message(string(y))
+		//x+=sign(move_speed)
+		//show_debug_message(string(y))
 		}
 	until (collision_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+1,obj_one_way_plat,true,true)) 
 	//y-=1
