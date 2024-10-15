@@ -1,5 +1,6 @@
 //Unlock weapon
 if weapon == obj_pistol {
+	
 	with obj_player {
 		pistol_unlocked = true
 		weapon = obj_pistol
