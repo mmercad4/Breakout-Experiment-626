@@ -298,7 +298,7 @@ if (mouse_x < x) {
 }
 
 if (not weapon_equipped and mouse_check_button_pressed(mb_left)){
-
+	audio_play_sound(snd_getting_hurt,1,false)
 	isMelee = true
 	sprite_index = spr_character_melee
 	image_index = 0
