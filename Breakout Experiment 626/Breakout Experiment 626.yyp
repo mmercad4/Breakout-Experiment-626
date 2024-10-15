@@ -230,6 +230,7 @@
     {"id":{"name":"spr_gun5_2","path":"sprites/spr_gun5_2/spr_gun5_2.yy",},},
     {"id":{"name":"spr_gun8_1","path":"sprites/spr_gun8_1/spr_gun8_1.yy",},},
     {"id":{"name":"spr_gun8_2","path":"sprites/spr_gun8_2/spr_gun8_2.yy",},},
+    {"id":{"name":"spr_health","path":"sprites/spr_health/spr_health.yy",},},
     {"id":{"name":"spr_idle_1_arm","path":"sprites/spr_idle_1_arm/spr_idle_1_arm.yy",},},
     {"id":{"name":"spr_idle","path":"sprites/spr_idle/spr_idle.yy",},},
     {"id":{"name":"spr_industrial_zone_1","path":"sprites/spr_industrial_zone_1/spr_industrial_zone_1.yy",},},

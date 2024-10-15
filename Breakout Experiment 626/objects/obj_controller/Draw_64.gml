@@ -31,9 +31,11 @@ draw_set_color(c_white);
 draw_text(bar_x + bar_width + 10, bar_y, string(player_hp) + "/" + string(100));
 draw_set_alpha(1)
 
-//Draw health packs TODO replace sprite
-for(i = 0; i<obj_player.hp_packs;i++){
-	draw_sprite(spr_enemy,0,(50+48*i),150)
+//Draw health packs
+if instance_exists(obj_player){
+	for(i = 0; i<obj_player.hp_packs;i++){
+		draw_sprite_ext(spr_health,0,(50+48*i),150,2,2,0,c_white,1)
+	}
 }
 
 //Draw gun and label

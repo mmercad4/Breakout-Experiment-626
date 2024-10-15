@@ -3,7 +3,7 @@ if hp <= 0 {
 }
 
 if keyboard_check_pressed(ord("H")){
-	if hp_packs >0 {
+	if hp_packs >0 and hp < 100 {
 		hp_packs -=1
 		if (isheal == false){
 			isheal = true
