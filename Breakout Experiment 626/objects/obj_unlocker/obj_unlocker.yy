@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_gun8_1",
+    "path":"sprites/spr_gun8_1/spr_gun8_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
