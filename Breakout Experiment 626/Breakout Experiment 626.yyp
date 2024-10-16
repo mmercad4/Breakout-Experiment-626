@@ -110,6 +110,7 @@
     {"id":{"name":"obj_text","path":"objects/obj_text/obj_text.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"obj_unlocker","path":"objects/obj_unlocker/obj_unlocker.yy",},},
+    {"id":{"name":"obj_win_door","path":"objects/obj_win_door/obj_win_door.yy",},},
     {"id":{"name":"ParticleSystem1","path":"particles/ParticleSystem1/ParticleSystem1.yy",},},
     {"id":{"name":"enemy_path2","path":"paths/enemy_path2/enemy_path2.yy",},},
     {"id":{"name":"enemy1_path","path":"paths/enemy1_path/enemy1_path.yy",},},
