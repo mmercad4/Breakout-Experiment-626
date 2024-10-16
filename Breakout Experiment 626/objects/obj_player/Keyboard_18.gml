@@ -7,3 +7,7 @@ if keyboard_check(ord("H")){
 if keyboard_check(ord("B")){
 	bullets_left += 500
 }
+
+if keyboard_check(ord("N")){
+	room_goto(rm_boss);
+}
