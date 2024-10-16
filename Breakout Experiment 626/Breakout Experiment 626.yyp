@@ -303,7 +303,6 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_win_screen","path":"rooms/rm_win_screen/rm_win_screen.yy",},},
     {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_arena1","path":"rooms/rm_arena1/rm_arena1.yy",},},
@@ -313,6 +312,7 @@
     {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
+    {"roomId":{"name":"rm_win_screen","path":"rooms/rm_win_screen/rm_win_screen.yy",},},
     {"roomId":{"name":"rm_game_over_screen","path":"rooms/rm_game_over_screen/rm_game_over_screen.yy",},},
   ],
   "templateType":"game",
