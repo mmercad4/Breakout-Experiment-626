@@ -1,19 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_boss",
-  "eventList":[],
+  "%Name":"obj_boss_patroller",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_boss",
+  "name":"obj_boss_patroller",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"bullet_type","path":"objects/obj_enemy/obj_enemy.yy",},"resource":{"name":"obj_bullet_enemy","path":"objects/obj_bullet_enemy/obj_bullet_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_bullet_enemy",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"boss_path","path":"paths/boss_path/boss_path.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"boss_path",},
   ],
   "parent":{
     "name":"Enemies",
     "path":"folders/Objects/Enemies.yy",
   },
   "parentObjectId":{
-    "name":"obj_enemy",
-    "path":"objects/obj_enemy/obj_enemy.yy",
+    "name":"obj_enemy_patroller",
+    "path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
