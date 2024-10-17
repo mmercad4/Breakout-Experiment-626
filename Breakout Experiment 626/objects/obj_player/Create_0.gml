@@ -1,6 +1,12 @@
+//health
 hp = 100
 hp_packs = 3
 
+//gold
+
+coins = 0
+
+//movement
 canShoot = true
 points = 0
 bullets_left = 0

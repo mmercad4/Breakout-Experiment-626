@@ -33,9 +33,16 @@ draw_set_alpha(1)
 
 //Draw health packs
 if instance_exists(obj_player){
+	draw_text(100,150,"Health packs: ")
 	for(i = 0; i<obj_player.hp_packs;i++){
-		draw_sprite_ext(spr_health,0,(50+48*i),150,2,2,0,c_white,1)
+		draw_sprite_ext(spr_health,0,(180+48*i),150,2,2,0,c_white,1)
 	}
+}
+
+//Draw Coins
+if instance_exists(obj_player){
+	draw_text(100,200,"Gold: "+string(obj_player.coins))
+	draw_sprite_ext(spr_coin_image,0,55,200,2,2,0,c_white,1)
 }
 
 //Draw gun and label
