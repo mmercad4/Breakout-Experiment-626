@@ -4,16 +4,9 @@
 
 // Knockback handling
 if (is_knockback) {
-    // Reduce the timer
     knockback_timer--;
-
-    // Apply knockback movement
-    x += hspeed; // Move horizontally
-    y += vspeed; // Move vertically
-
     // Constrain the player's x position
     x = clamp(x, sprite_width / 2, room_width - (sprite_width / 2));
-
     // Constrain the player's y position
     y = clamp(y, sprite_height / 2, room_height - (sprite_height / 2));
 
