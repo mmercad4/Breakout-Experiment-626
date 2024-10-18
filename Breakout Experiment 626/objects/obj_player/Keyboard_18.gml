@@ -8,6 +8,6 @@ if keyboard_check(ord("B")){
 	bullets_left += 500
 }
 
-if keyboard_check(ord("N")){
+if keyboard_check(ord("Z")){
 	room_goto(rm_boss);
 }
