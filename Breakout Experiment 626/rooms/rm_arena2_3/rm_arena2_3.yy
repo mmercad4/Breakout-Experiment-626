@@ -70,8 +70,6 @@
     {"name":"inst_620AD1F2","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
     {"name":"inst_78B64558","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
     {"name":"inst_506419CC","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
-    {"name":"inst_49DC1798","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
-    {"name":"inst_1674C08","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
     {"name":"inst_75A5EFC0","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
     {"name":"inst_4A36305F","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
     {"name":"inst_504AF5B3","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},
@@ -132,12 +130,6 @@
         {"$GMRInstance":"v1","%Name":"inst_506419CC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_506419CC","objectId":{"name":"obj_drone_enemy","path":"objects/obj_drone_enemy/obj_drone_enemy.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"Path9","path":"paths/Path9/Path9.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Path9",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":391.0,"y":273.0,},
-        {"$GMRInstance":"v1","%Name":"inst_49DC1798","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_49DC1798","objectId":{"name":"obj_drone_enemy","path":"objects/obj_drone_enemy/obj_drone_enemy.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"Path7","path":"paths/Path7/Path7.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Path7",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":389.0,"y":416.0,},
-        {"$GMRInstance":"v1","%Name":"inst_1674C08","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1674C08","objectId":{"name":"obj_humanoid_enemy","path":"objects/obj_humanoid_enemy/obj_humanoid_enemy.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_patroller","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"propertyId":{"name":"walk_path","path":"objects/obj_enemy_patroller/obj_enemy_patroller.yy",},"resource":{"name":"Path8","path":"paths/Path8/Path8.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Path8",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":444.0,"y":343.0,},
         {"$GMRInstance":"v1","%Name":"inst_75A5EFC0","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75A5EFC0","objectId":{"name":"obj_arena_spawner","path":"objects/obj_arena_spawner/obj_arena_spawner.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_arena_spawner","path":"objects/obj_arena_spawner/obj_arena_spawner.yy",},"propertyId":{"name":"trigger_obj","path":"objects/obj_arena_spawner/obj_arena_spawner.yy",},"resource":{"name":"inst_7B46371E","path":"rooms/rm_arena2_3/rm_arena2_3.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"inst_7B46371E",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":169.0,"y":254.0,},
