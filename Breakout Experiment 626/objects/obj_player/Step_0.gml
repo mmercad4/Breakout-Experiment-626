@@ -1,6 +1,36 @@
+// Step Event for obj_player
+
+// Step Event for obj_player
+
+// Knockback handling
+if (is_knockback) {
+    // Reduce the timer
+    knockback_timer--;
+
+    // Apply knockback movement
+    x += hspeed; // Move horizontally
+    y += vspeed; // Move vertically
+
+    // Constrain the player's x position
+    x = clamp(x, sprite_width / 2, room_width - (sprite_width / 2));
+
+    // Constrain the player's y position
+    y = clamp(y, sprite_height / 2, room_height - (sprite_height / 2));
+
+    // Reset the state after the timer ends
+    if (knockback_timer <= 0) {
+        is_knockback = false; // Reset the knockback state
+        vspeed = 0; // Stop upward movement
+        hspeed = 0; // Stop horizontal movement
+    }
+}
+
+
+
  if hp <= 0 {
 	instance_destroy()
 }
+
 
 if keyboard_check_pressed(ord("H")){
 	if hp_packs >0 and hp < 100 {

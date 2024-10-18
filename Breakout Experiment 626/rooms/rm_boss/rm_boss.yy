@@ -25,20 +25,13 @@
     {"name":"inst_7FF53A64","path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"inst_723F9FEF","path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"inst_5AC82225","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_63AF0809","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_26F3399E","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_3147B69B","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_3A16611B","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_5ACC8E9D","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_3B810261","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_1A5CF3AA","path":"rooms/rm_boss/rm_boss.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"cameras","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_3E856158","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3E856158","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.33,"scaleY":1.87,"x":82.0,"y":581.0,},
         {"$GMRInstance":"v1","%Name":"inst_2769B5A9","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2769B5A9","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"propertyId":{"name":"arena_trigger","path":"objects/obj_camera/obj_camera.yy",},"resource":{"name":"inst_16DCAEFF","path":"rooms/rm_boss/rm_boss.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"inst_16DCAEFF",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"propertyId":{"name":"arena_trigger","path":"objects/obj_camera/obj_camera.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"inst_16DCAEFF",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"propertyId":{"name":"doors","path":"objects/obj_camera/obj_camera.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.29,"scaleY":2.41,"x":415.0,"y":509.0,},
         {"$GMRInstance":"v1","%Name":"inst_16DCAEFF","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16DCAEFF","objectId":{"name":"obj_arena_spawner","path":"objects/obj_arena_spawner/obj_arena_spawner.yy",},"properties":[
@@ -47,7 +40,7 @@
       ],"layers":[],"name":"cameras","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRPathLayer":"","%Name":"Path_1","colour":4278190335,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Path_1","pathId":{"name":"boss_path","path":"paths/boss_path/boss_path.yy",},"properties":[],"resourceType":"GMRPathLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_77C79DD7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_77C79DD7","objectId":{"name":"obj_boss_patroller","path":"objects/obj_boss_patroller/obj_boss_patroller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":608.0,},
+        {"$GMRInstance":"v1","%Name":"inst_77C79DD7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_77C79DD7","objectId":{"name":"obj_boss_patroller","path":"objects/obj_boss_patroller/obj_boss_patroller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":820.0,"y":685.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":86,"TileCompressedData":[
           -2155,-2147483648,-10,145,-27,-2147483648,-5,148,-48,-2147483648,-6,145,-25,-2147483648,-4,148,-47,-2147483648,
