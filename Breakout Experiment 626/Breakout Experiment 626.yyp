@@ -90,6 +90,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
+    {"id":{"name":"obj_destroyer","path":"objects/obj_destroyer/obj_destroyer.yy",},},
     {"id":{"name":"obj_destructible_block","path":"objects/obj_destructible_block/obj_destructible_block.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
     {"id":{"name":"obj_drone_enemy","path":"objects/obj_drone_enemy/obj_drone_enemy.yy",},},
