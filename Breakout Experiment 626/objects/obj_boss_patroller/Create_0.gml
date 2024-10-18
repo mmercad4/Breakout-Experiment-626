@@ -4,3 +4,4 @@
 is_regenerating = false;
 is_patrolling = false;
 patrol_timer = 0;
+obj_player.is_boss_present = true;

@@ -27,7 +27,7 @@ if (sprite_index == spr_boss_attack3) {
 }
 
 // Regeneration Logic
-if (hp < 250 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] == -1) {
+if (hp < 500 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] == -1) {
     // Change to special sprite and start regenerating health
     sprite_index = spr_boss_special;
     is_regenerating = true; // Start the regeneration process
@@ -41,13 +41,16 @@ if (hp < 250 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] =
 
 // Regenerate health if the boss is in special state
 if (is_regenerating) {
-    if (hp < 1000) { // Cap health to 5000
+    if (hp < 1000) { // Cap health to 1000
         hp += 10; // Regenerate 10 health points per step; adjust as necessary
     }
     if (hp >= 1000) {
         hp = 1000; // Ensure health does not exceed maximum
         is_regenerating = false; // Stop regenerating once max health is reached
-        sprite_index = spr_boss_attack1; // Change back to attack sprite
+        // Change back to attack sprite only if not patrolling
+        if (!is_patrolling) {
+            sprite_index = spr_boss_attack1; // Change back to attack sprite
+        }
     }
 }
 
@@ -107,7 +110,10 @@ if (is_patrolling && path_position >= path_get_length(walk_path) - 1) {
 // Alarm Event for obj_patroller (add this part)
 if (alarm[1] == 0) {
     is_patrolling = false; // Reset patrolling state to false
-    sprite_index = spr_boss_attack1; // Change back to attack sprite
+    // Only change sprite back to attack if not regenerating
+    if (!is_regenerating) {
+        sprite_index = spr_boss_attack1; // Change back to attack sprite
+    }
     alarm[0] = shooting_delay; // Restart shooting
 }
 
@@ -115,4 +121,8 @@ if (alarm[1] == 0) {
 if (alarm[2] == 0) {
     // This alarm will be reset after regeneration occurs
     is_regenerating = false; // Allow regeneration again after cooldown
+    // Ensure the sprite is set correctly if not patrolling
+    if (!is_patrolling) {
+        sprite_index = spr_boss_attack1; // Change back to attack sprite
+    }
 }

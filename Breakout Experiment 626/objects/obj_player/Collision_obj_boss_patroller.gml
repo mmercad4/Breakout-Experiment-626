@@ -7,8 +7,8 @@ if (current_time - last_damage_time >= damage_cooldown) {
     last_damage_time = current_time; // Update the last damage time
 
     // Apply knockback effect
-    var knockback_strength = 2; // Adjust this value to control knockback strength
-    var knockback_upward = -2; // Upward velocity (negative value to move up)
+    var knockback_strength = 12; // Adjust this value to control knockback strength
+    var knockback_upward = -12; // Upward velocity (negative value to move up)
 
     // Determine the direction to push the player based on the enemy's position
     if (x > other.x) {
@@ -23,5 +23,5 @@ if (current_time - last_damage_time >= damage_cooldown) {
 
     // Start a temporary knockback effect
     obj_player.is_knockback = true; // Set knockback state
-    obj_player.knockback_timer = room_speed * 0.5; // Lasts for half a second (30 frames at 60 FPS)
+    obj_player.knockback_timer = 10; // Lasts for half a second (30 frames at 60 FPS)
 }

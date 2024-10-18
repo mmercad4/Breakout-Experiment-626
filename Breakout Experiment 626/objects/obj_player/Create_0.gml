@@ -4,6 +4,7 @@ hp_packs = 3
 damage_cooldown = 600;
 last_damage_time = -damage_cooldown;
 is_knockback = false;
+is_boss_present = false;
 
 //gold
 

@@ -1,22 +1,33 @@
 // Step Event for obj_player
 
-// Step Event for obj_player
-
 // Knockback handling
 if (is_knockback) {
     knockback_timer--;
-    // Constrain the player's x position
-    x = clamp(x, sprite_width / 2, room_width - (sprite_width / 2));
-    // Constrain the player's y position
-    y = clamp(y, sprite_height / 2, room_height - (sprite_height / 2));
 
     // Reset the state after the timer ends
     if (knockback_timer <= 0) {
-        is_knockback = false; // Reset the knockback state
-        vspeed = 0; // Stop upward movement
-        hspeed = 0; // Stop horizontal movement
+        is_knockback = false;  // Reset the knockback state
+        vspeed = 0;            // Stop vertical movement
+        hspeed = 0;            // Stop horizontal movement
     }
 }
+
+if (x < 440 || x > 800) {
+    vspeed = 0;
+    hspeed = 0;
+}
+
+// Now apply clamping after movement
+if (is_boss_present) {
+    if (x >= 440 && x <= 1000) {
+        // Clamp X position within the boss room range
+        x = clamp(x, 440, 830); 
+        
+        // Clamp Y position within the boss room range
+        y = clamp(y, 500, 700); 
+    }
+}
+
 
 
 
