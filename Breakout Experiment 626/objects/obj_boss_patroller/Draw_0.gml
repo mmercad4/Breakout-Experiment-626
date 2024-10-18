@@ -11,7 +11,7 @@ var bar_width = 50;     // New smaller width of the health bar
 var bar_height = 5;     // New smaller height of the health bar
 
 // Calculate the current width of the health bar based on enemy's health
-var current_bar_width = (hp / 5000) * bar_width;  // Adjust 100 if the max health is different
+var current_bar_width = (hp / 1000) * bar_width;  // Adjust 100 if the max health is different
 
 // Define position for the health bar above the humanoid
 var bar_x = x - (bar_width/2); // Center the bar above the enemy

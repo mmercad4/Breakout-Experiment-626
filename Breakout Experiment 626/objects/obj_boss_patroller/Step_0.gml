@@ -1,7 +1,7 @@
 // Step Event for obj_patroller
 
 // Check if the boss has taken damage
-if (hp < 5000) {
+if (hp < 1000) {
     is_damaged = true; // Mark as damaged
 }
 
@@ -27,7 +27,7 @@ if (sprite_index == spr_boss_attack3) {
 }
 
 // Regeneration Logic
-if (hp < 2500 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] == -1) {
+if (hp < 250 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] == -1) {
     // Change to special sprite and start regenerating health
     sprite_index = spr_boss_special;
     is_regenerating = true; // Start the regeneration process
@@ -41,11 +41,11 @@ if (hp < 2500 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] 
 
 // Regenerate health if the boss is in special state
 if (is_regenerating) {
-    if (hp < 5000) { // Cap health to 5000
+    if (hp < 1000) { // Cap health to 5000
         hp += 10; // Regenerate 10 health points per step; adjust as necessary
     }
-    if (hp >= 5000) {
-        hp = 5000; // Ensure health does not exceed maximum
+    if (hp >= 1000) {
+        hp = 1000; // Ensure health does not exceed maximum
         is_regenerating = false; // Stop regenerating once max health is reached
         sprite_index = spr_boss_attack1; // Change back to attack sprite
     }
@@ -78,7 +78,7 @@ if (instance_exists(obj_player)) {
     }
 
     // Check if the distance to the player is more than 280
-    if (dist_to_player > 280) {
+    if (dist_to_player > 280 && dist_to_player <= 300) {
         // Allow patrolling if not already patrolling
         if (!is_patrolling && !is_regenerating) {
             is_patrolling = true; // Set patrolling state to true
