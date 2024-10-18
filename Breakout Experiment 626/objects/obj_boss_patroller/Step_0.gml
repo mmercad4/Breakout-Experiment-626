@@ -26,30 +26,6 @@ if (sprite_index == spr_boss_attack3) {
     }
 }
 
-// Regeneration Logic
-if (hp < 2500 && sprite_index != spr_boss_special && !is_patrolling && alarm[2] == -1) {
-    // Change to special sprite and start regenerating health
-    sprite_index = spr_boss_special;
-    is_regenerating = true; // Start the regeneration process
-    
-    // Stop the shooting alarm while regenerating
-    alarm[0] = -1; // Disable the shooting alarm
-    
-    // Set the regeneration cooldown (500 seconds)
-    alarm[2] = 500; // 500 seconds, assuming room_speed is 60
-}
-
-// Regenerate health if the boss is in special state
-if (is_regenerating) {
-    if (hp < 5000) { // Cap health to 5000
-        hp += 10; // Regenerate 10 health points per step; adjust as necessary
-    }
-    if (hp >= 5000) {
-        hp = 5000; // Ensure health does not exceed maximum
-        is_regenerating = false; // Stop regenerating once max health is reached
-        sprite_index = spr_boss_attack1; // Change back to attack sprite
-    }
-}
 
 // Check if the player exists in the room
 if (instance_exists(obj_player)) {
@@ -62,14 +38,14 @@ if (instance_exists(obj_player)) {
         var collision_with_wall = collision_line(x, y, obj_player.x, obj_player.y, obj_block, true, true);
         
         // If no wall is detected (i.e., no object blocking the line of sight), shoot
-        if (!is_patrolling && !is_regenerating) { // Don't shoot if regenerating
+        if (!is_patrolling) {
             // Ensure the alarm is active to handle shooting
             if (alarm[0] == -1) { // Check if the alarm is not set
                 alarm[0] = shooting_delay; // Start the shooting alarm
                 sprite_index = spr_boss_attack1; // Change to the attack sprite
             }
         } else {
-            // Stop shooting if there is a wall or if regenerating
+            // Stop shooting if there is a wall
             alarm[0] = -1; // Disable the shooting alarm
         }
     } else {
@@ -80,10 +56,10 @@ if (instance_exists(obj_player)) {
     // Check if the distance to the player is more than 280
     if (dist_to_player > 280) {
         // Allow patrolling if not already patrolling
-        if (!is_patrolling && !is_regenerating) {
+        if (!is_patrolling) {
             is_patrolling = true; // Set patrolling state to true
             sprite_index = spr_boss_attack3; // Change to patrolling sprite
-            
+			
             // Start the path movement
             path_start(walk_path, 2, path_action_stop, false); // Start path movement
             
@@ -109,10 +85,4 @@ if (alarm[1] == 0) {
     is_patrolling = false; // Reset patrolling state to false
     sprite_index = spr_boss_attack1; // Change back to attack sprite
     alarm[0] = shooting_delay; // Restart shooting
-}
-
-// Handle regeneration cooldown in the Alarm Event
-if (alarm[2] == 0) {
-    // This alarm will be reset after regeneration occurs
-    is_regenerating = false; // Allow regeneration again after cooldown
 }
