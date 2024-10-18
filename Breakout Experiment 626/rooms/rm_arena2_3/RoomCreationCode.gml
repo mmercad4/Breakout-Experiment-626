@@ -6,4 +6,4 @@ catch( _exception) {
 	
 }
 //If target loc isn't initialized yet, obj_player gets placed in their default location within the room.
-global.load_timer = 240 //Time til the player is allowed to go into the next room
+global.load_timer = 100 //Time til the player is allowed to go into the next room
