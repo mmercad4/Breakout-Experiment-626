@@ -8,6 +8,7 @@ if hp < 100 {
     is_damaged = true;
 }
 if hp <= 0 {
+	audio_play_sound(snd_human_enemy_death,.5,false)
     instance_destroy();
 }
 

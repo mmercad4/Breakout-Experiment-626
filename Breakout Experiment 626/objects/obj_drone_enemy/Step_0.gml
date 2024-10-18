@@ -7,6 +7,7 @@ if hp < 100 {
     is_damaged = true;
 }
 if hp <= 0 {
+	audio_play_sound(snd_machine_death,.25,false)
     instance_destroy();
 }
 
